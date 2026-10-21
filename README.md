@@ -8,6 +8,14 @@ A free, open-source Windows diagnostics and maintenance reference with a dark de
 
 ![Actual screenshot of Windows Admin Toolkit v1.2.0 beta](assets/app_preview.png)
 
+## Detailed PDF Manual
+
+The printable handbook explains **all 69 commands**, with practical usage instructions, safety classifications, examples, administrator and drive requirements, limitations, and Microsoft documentation links.
+
+**[Read or download the Complete User Guide & Command Handbook (PDF)](docs/Windows_Admin_Toolkit_Detailed_Guide.pdf)**
+
+The PDF is rebuilt automatically from `USER_MANUAL.md` and `COMMAND_REFERENCE.md` by the [documentation workflow](.github/workflows/publish-guide.yml).
+
 ## Main features
 
 - **69 commands / 11 categories:** Windows file repair, DISM, disk health, RAM, startup/drivers, networking, Windows logs, power, battery and temporary files.
