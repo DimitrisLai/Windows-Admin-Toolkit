@@ -55,7 +55,7 @@ class TempCleanerTests(unittest.TestCase):
             self.assertEqual(results.eligible_bytes, 256)
             self.assertTrue(old.is_file())
             self.assertTrue(fresh.is_file())
-            self.assertEqual(results.files[0].path, str(old))
+            self.assertEqual(os.path.normcase(results.files[0].path), os.path.normcase(str(old)))
 
     def test_only_explicitly_selected_old_files_are_deleted(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -68,7 +68,7 @@ class TempCleanerTests(unittest.TestCase):
             os.utime(old, (t, t))
             os.utime(another, (t, t))
             results = scan_aged_files(tmp, 7)
-            entry = next(c for c in results.files if c.path == str(old))
+            entry = next(c for c in results.files if os.path.normcase(c.path) == os.path.normcase(str(old)))
             count, size, skipped = remove_selected(tmp, [entry], 7)
             self.assertEqual((count, size, skipped), (1, 12, 0))
             self.assertFalse(old.exists())
