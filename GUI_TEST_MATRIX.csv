@@ -1,0 +1,1314 @@
+command_id,test,status
+GLOBAL,all commands initially present,PASS
+GLOBAL,all 11 categories present,PASS
+GLOBAL,both drive choices available,PASS
+sfc.scan,listbox click selects the correct entry,PASS
+sfc.scan,category label correct,PASS
+sfc.scan,drive selector enabled only when needed,PASS
+sfc.scan,file chooser enabled only when needed,PASS
+sfc.scan,report chooser enabled only when needed,PASS
+sfc.scan,hostname entry enabled only when needed,PASS
+sfc.scan,port entry enabled only when needed,PASS
+sfc.scan,command explanation available in catalog,PASS
+sfc.scan,copy action unlocked for valid selection,PASS
+sfc.scan,run action unlocked for valid selection,PASS
+sfc.scan,copy button produces exact preview text,PASS
+sfc.scan,copy button updates status,PASS
+sfc.scan,danger confirmation shown,PASS
+sfc.scan,cancel means no execution,PASS
+sfc.scan,accepted run reaches launch exactly once,PASS
+sfc.scan,correct command instance passed,PASS
+sfc.scan,launch-request dialog shown,PASS
+sfc.scan,failed launch shows error not success,PASS
+sfc.verify,listbox click selects the correct entry,PASS
+sfc.verify,category label correct,PASS
+sfc.verify,drive selector enabled only when needed,PASS
+sfc.verify,file chooser enabled only when needed,PASS
+sfc.verify,report chooser enabled only when needed,PASS
+sfc.verify,hostname entry enabled only when needed,PASS
+sfc.verify,port entry enabled only when needed,PASS
+sfc.verify,command explanation available in catalog,PASS
+sfc.verify,copy action unlocked for valid selection,PASS
+sfc.verify,run action unlocked for valid selection,PASS
+sfc.verify,copy button produces exact preview text,PASS
+sfc.verify,copy button updates status,PASS
+sfc.verify,read-only command skips danger confirmation,PASS
+sfc.verify,read-only run reaches launcher,PASS
+sfc.verify,accepted run reaches launch exactly once,PASS
+sfc.verify,correct command instance passed,PASS
+sfc.verify,launch-request dialog shown,PASS
+sfc.verify,failed launch shows error not success,PASS
+sfc.file,listbox click selects the correct entry,PASS
+sfc.file,category label correct,PASS
+sfc.file,drive selector enabled only when needed,PASS
+sfc.file,file chooser enabled only when needed,PASS
+sfc.file,report chooser enabled only when needed,PASS
+sfc.file,hostname entry enabled only when needed,PASS
+sfc.file,port entry enabled only when needed,PASS
+sfc.file,command explanation available in catalog,PASS
+sfc.file,action initially locked until target chosen,PASS
+sfc.file,file chooser populates a valid target,PASS
+sfc.file,copy action unlocked for valid selection,PASS
+sfc.file,run action unlocked for valid selection,PASS
+sfc.file,copy button produces exact preview text,PASS
+sfc.file,copy button updates status,PASS
+sfc.file,danger confirmation shown,PASS
+sfc.file,cancel means no execution,PASS
+sfc.file,accepted run reaches launch exactly once,PASS
+sfc.file,correct command instance passed,PASS
+sfc.file,launch-request dialog shown,PASS
+sfc.file,failed launch shows error not success,PASS
+dism.check,listbox click selects the correct entry,PASS
+dism.check,category label correct,PASS
+dism.check,drive selector enabled only when needed,PASS
+dism.check,file chooser enabled only when needed,PASS
+dism.check,report chooser enabled only when needed,PASS
+dism.check,hostname entry enabled only when needed,PASS
+dism.check,port entry enabled only when needed,PASS
+dism.check,command explanation available in catalog,PASS
+dism.check,copy action unlocked for valid selection,PASS
+dism.check,run action unlocked for valid selection,PASS
+dism.check,copy button produces exact preview text,PASS
+dism.check,copy button updates status,PASS
+dism.check,read-only command skips danger confirmation,PASS
+dism.check,read-only run reaches launcher,PASS
+dism.check,accepted run reaches launch exactly once,PASS
+dism.check,correct command instance passed,PASS
+dism.check,launch-request dialog shown,PASS
+dism.check,failed launch shows error not success,PASS
+dism.scan,listbox click selects the correct entry,PASS
+dism.scan,category label correct,PASS
+dism.scan,drive selector enabled only when needed,PASS
+dism.scan,file chooser enabled only when needed,PASS
+dism.scan,report chooser enabled only when needed,PASS
+dism.scan,hostname entry enabled only when needed,PASS
+dism.scan,port entry enabled only when needed,PASS
+dism.scan,command explanation available in catalog,PASS
+dism.scan,copy action unlocked for valid selection,PASS
+dism.scan,run action unlocked for valid selection,PASS
+dism.scan,copy button produces exact preview text,PASS
+dism.scan,copy button updates status,PASS
+dism.scan,read-only command skips danger confirmation,PASS
+dism.scan,read-only run reaches launcher,PASS
+dism.scan,accepted run reaches launch exactly once,PASS
+dism.scan,correct command instance passed,PASS
+dism.scan,launch-request dialog shown,PASS
+dism.scan,failed launch shows error not success,PASS
+dism.restore,listbox click selects the correct entry,PASS
+dism.restore,category label correct,PASS
+dism.restore,drive selector enabled only when needed,PASS
+dism.restore,file chooser enabled only when needed,PASS
+dism.restore,report chooser enabled only when needed,PASS
+dism.restore,hostname entry enabled only when needed,PASS
+dism.restore,port entry enabled only when needed,PASS
+dism.restore,command explanation available in catalog,PASS
+dism.restore,copy action unlocked for valid selection,PASS
+dism.restore,run action unlocked for valid selection,PASS
+dism.restore,copy button produces exact preview text,PASS
+dism.restore,copy button updates status,PASS
+dism.restore,danger confirmation shown,PASS
+dism.restore,cancel means no execution,PASS
+dism.restore,accepted run reaches launch exactly once,PASS
+dism.restore,correct command instance passed,PASS
+dism.restore,launch-request dialog shown,PASS
+dism.restore,failed launch shows error not success,PASS
+dism.analyze,listbox click selects the correct entry,PASS
+dism.analyze,category label correct,PASS
+dism.analyze,drive selector enabled only when needed,PASS
+dism.analyze,file chooser enabled only when needed,PASS
+dism.analyze,report chooser enabled only when needed,PASS
+dism.analyze,hostname entry enabled only when needed,PASS
+dism.analyze,port entry enabled only when needed,PASS
+dism.analyze,command explanation available in catalog,PASS
+dism.analyze,copy action unlocked for valid selection,PASS
+dism.analyze,run action unlocked for valid selection,PASS
+dism.analyze,copy button produces exact preview text,PASS
+dism.analyze,copy button updates status,PASS
+dism.analyze,read-only command skips danger confirmation,PASS
+dism.analyze,read-only run reaches launcher,PASS
+dism.analyze,accepted run reaches launch exactly once,PASS
+dism.analyze,correct command instance passed,PASS
+dism.analyze,launch-request dialog shown,PASS
+dism.analyze,failed launch shows error not success,PASS
+disk.check,listbox click selects the correct entry,PASS
+disk.check,category label correct,PASS
+disk.check,drive selector enabled only when needed,PASS
+disk.check,file chooser enabled only when needed,PASS
+disk.check,report chooser enabled only when needed,PASS
+disk.check,hostname entry enabled only when needed,PASS
+disk.check,port entry enabled only when needed,PASS
+disk.check,command explanation available in catalog,PASS
+disk.check,copy action unlocked for valid selection,PASS
+disk.check,run action unlocked for valid selection,PASS
+disk.check,selected D: inserted into command,PASS
+disk.check,copy button produces exact preview text,PASS
+disk.check,copy button updates status,PASS
+disk.check,read-only command skips danger confirmation,PASS
+disk.check,read-only run reaches launcher,PASS
+disk.check,accepted run reaches launch exactly once,PASS
+disk.check,correct command instance passed,PASS
+disk.check,launch-request dialog shown,PASS
+disk.check,failed launch shows error not success,PASS
+disk.scan,listbox click selects the correct entry,PASS
+disk.scan,category label correct,PASS
+disk.scan,drive selector enabled only when needed,PASS
+disk.scan,file chooser enabled only when needed,PASS
+disk.scan,report chooser enabled only when needed,PASS
+disk.scan,hostname entry enabled only when needed,PASS
+disk.scan,port entry enabled only when needed,PASS
+disk.scan,command explanation available in catalog,PASS
+disk.scan,copy action unlocked for valid selection,PASS
+disk.scan,run action unlocked for valid selection,PASS
+disk.scan,selected D: inserted into command,PASS
+disk.scan,copy button produces exact preview text,PASS
+disk.scan,copy button updates status,PASS
+disk.scan,read-only command skips danger confirmation,PASS
+disk.scan,read-only run reaches launcher,PASS
+disk.scan,accepted run reaches launch exactly once,PASS
+disk.scan,correct command instance passed,PASS
+disk.scan,launch-request dialog shown,PASS
+disk.scan,failed launch shows error not success,PASS
+disk.fix,listbox click selects the correct entry,PASS
+disk.fix,category label correct,PASS
+disk.fix,drive selector enabled only when needed,PASS
+disk.fix,file chooser enabled only when needed,PASS
+disk.fix,report chooser enabled only when needed,PASS
+disk.fix,hostname entry enabled only when needed,PASS
+disk.fix,port entry enabled only when needed,PASS
+disk.fix,command explanation available in catalog,PASS
+disk.fix,copy action unlocked for valid selection,PASS
+disk.fix,run action unlocked for valid selection,PASS
+disk.fix,selected D: inserted into command,PASS
+disk.fix,copy button produces exact preview text,PASS
+disk.fix,copy button updates status,PASS
+disk.fix,danger confirmation shown,PASS
+disk.fix,cancel means no execution,PASS
+disk.fix,accepted run reaches launch exactly once,PASS
+disk.fix,correct command instance passed,PASS
+disk.fix,launch-request dialog shown,PASS
+disk.fix,failed launch shows error not success,PASS
+disk.recover,listbox click selects the correct entry,PASS
+disk.recover,category label correct,PASS
+disk.recover,drive selector enabled only when needed,PASS
+disk.recover,file chooser enabled only when needed,PASS
+disk.recover,report chooser enabled only when needed,PASS
+disk.recover,hostname entry enabled only when needed,PASS
+disk.recover,port entry enabled only when needed,PASS
+disk.recover,command explanation available in catalog,PASS
+disk.recover,copy action unlocked for valid selection,PASS
+disk.recover,run action unlocked for valid selection,PASS
+disk.recover,selected D: inserted into command,PASS
+disk.recover,copy button produces exact preview text,PASS
+disk.recover,copy button updates status,PASS
+disk.recover,danger confirmation shown,PASS
+disk.recover,cancel means no execution,PASS
+disk.recover,accepted run reaches launch exactly once,PASS
+disk.recover,correct command instance passed,PASS
+disk.recover,launch-request dialog shown,PASS
+disk.recover,failed launch shows error not success,PASS
+disk.health,listbox click selects the correct entry,PASS
+disk.health,category label correct,PASS
+disk.health,drive selector enabled only when needed,PASS
+disk.health,file chooser enabled only when needed,PASS
+disk.health,report chooser enabled only when needed,PASS
+disk.health,hostname entry enabled only when needed,PASS
+disk.health,port entry enabled only when needed,PASS
+disk.health,command explanation available in catalog,PASS
+disk.health,copy action unlocked for valid selection,PASS
+disk.health,run action unlocked for valid selection,PASS
+disk.health,copy button produces exact preview text,PASS
+disk.health,copy button updates status,PASS
+disk.health,read-only command skips danger confirmation,PASS
+disk.health,read-only run reaches launcher,PASS
+disk.health,accepted run reaches launch exactly once,PASS
+disk.health,correct command instance passed,PASS
+disk.health,launch-request dialog shown,PASS
+disk.health,failed launch shows error not success,PASS
+disk.volumes,listbox click selects the correct entry,PASS
+disk.volumes,category label correct,PASS
+disk.volumes,drive selector enabled only when needed,PASS
+disk.volumes,file chooser enabled only when needed,PASS
+disk.volumes,report chooser enabled only when needed,PASS
+disk.volumes,hostname entry enabled only when needed,PASS
+disk.volumes,port entry enabled only when needed,PASS
+disk.volumes,command explanation available in catalog,PASS
+disk.volumes,copy action unlocked for valid selection,PASS
+disk.volumes,run action unlocked for valid selection,PASS
+disk.volumes,selected D: inserted into command,PASS
+disk.volumes,copy button produces exact preview text,PASS
+disk.volumes,copy button updates status,PASS
+disk.volumes,read-only command skips danger confirmation,PASS
+disk.volumes,read-only run reaches launcher,PASS
+disk.volumes,accepted run reaches launch exactly once,PASS
+disk.volumes,correct command instance passed,PASS
+disk.volumes,launch-request dialog shown,PASS
+disk.volumes,failed launch shows error not success,PASS
+memory,listbox click selects the correct entry,PASS
+memory,category label correct,PASS
+memory,drive selector enabled only when needed,PASS
+memory,file chooser enabled only when needed,PASS
+memory,report chooser enabled only when needed,PASS
+memory,hostname entry enabled only when needed,PASS
+memory,port entry enabled only when needed,PASS
+memory,command explanation available in catalog,PASS
+memory,copy action unlocked for valid selection,PASS
+memory,run action unlocked for valid selection,PASS
+memory,copy button produces exact preview text,PASS
+memory,copy button updates status,PASS
+memory,danger confirmation shown,PASS
+memory,cancel means no execution,PASS
+memory,accepted run reaches launch exactly once,PASS
+memory,correct command instance passed,PASS
+memory,launch-request dialog shown,PASS
+memory,failed launch shows error not success,PASS
+sys.info,listbox click selects the correct entry,PASS
+sys.info,category label correct,PASS
+sys.info,drive selector enabled only when needed,PASS
+sys.info,file chooser enabled only when needed,PASS
+sys.info,report chooser enabled only when needed,PASS
+sys.info,hostname entry enabled only when needed,PASS
+sys.info,port entry enabled only when needed,PASS
+sys.info,command explanation available in catalog,PASS
+sys.info,copy action unlocked for valid selection,PASS
+sys.info,run action unlocked for valid selection,PASS
+sys.info,copy button produces exact preview text,PASS
+sys.info,copy button updates status,PASS
+sys.info,read-only command skips danger confirmation,PASS
+sys.info,read-only run reaches launcher,PASS
+sys.info,accepted run reaches launch exactly once,PASS
+sys.info,correct command instance passed,PASS
+sys.info,launch-request dialog shown,PASS
+sys.info,failed launch shows error not success,PASS
+sys.fullinfo,listbox click selects the correct entry,PASS
+sys.fullinfo,category label correct,PASS
+sys.fullinfo,drive selector enabled only when needed,PASS
+sys.fullinfo,file chooser enabled only when needed,PASS
+sys.fullinfo,report chooser enabled only when needed,PASS
+sys.fullinfo,hostname entry enabled only when needed,PASS
+sys.fullinfo,port entry enabled only when needed,PASS
+sys.fullinfo,command explanation available in catalog,PASS
+sys.fullinfo,copy action unlocked for valid selection,PASS
+sys.fullinfo,run action unlocked for valid selection,PASS
+sys.fullinfo,copy button produces exact preview text,PASS
+sys.fullinfo,copy button updates status,PASS
+sys.fullinfo,read-only command skips danger confirmation,PASS
+sys.fullinfo,read-only run reaches launcher,PASS
+sys.fullinfo,accepted run reaches launch exactly once,PASS
+sys.fullinfo,correct command instance passed,PASS
+sys.fullinfo,launch-request dialog shown,PASS
+sys.fullinfo,failed launch shows error not success,PASS
+lic.expiration,listbox click selects the correct entry,PASS
+lic.expiration,category label correct,PASS
+lic.expiration,drive selector enabled only when needed,PASS
+lic.expiration,file chooser enabled only when needed,PASS
+lic.expiration,report chooser enabled only when needed,PASS
+lic.expiration,hostname entry enabled only when needed,PASS
+lic.expiration,port entry enabled only when needed,PASS
+lic.expiration,command explanation available in catalog,PASS
+lic.expiration,copy action unlocked for valid selection,PASS
+lic.expiration,run action unlocked for valid selection,PASS
+lic.expiration,copy button produces exact preview text,PASS
+lic.expiration,copy button updates status,PASS
+lic.expiration,read-only command skips danger confirmation,PASS
+lic.expiration,read-only run reaches launcher,PASS
+lic.expiration,accepted run reaches launch exactly once,PASS
+lic.expiration,correct command instance passed,PASS
+lic.expiration,launch-request dialog shown,PASS
+lic.expiration,failed launch shows error not success,PASS
+lic.details,listbox click selects the correct entry,PASS
+lic.details,category label correct,PASS
+lic.details,drive selector enabled only when needed,PASS
+lic.details,file chooser enabled only when needed,PASS
+lic.details,report chooser enabled only when needed,PASS
+lic.details,hostname entry enabled only when needed,PASS
+lic.details,port entry enabled only when needed,PASS
+lic.details,command explanation available in catalog,PASS
+lic.details,copy action unlocked for valid selection,PASS
+lic.details,run action unlocked for valid selection,PASS
+lic.details,copy button produces exact preview text,PASS
+lic.details,copy button updates status,PASS
+lic.details,read-only command skips danger confirmation,PASS
+lic.details,read-only run reaches launcher,PASS
+lic.details,accepted run reaches launch exactly once,PASS
+lic.details,correct command instance passed,PASS
+lic.details,launch-request dialog shown,PASS
+lic.details,failed launch shows error not success,PASS
+net.all,listbox click selects the correct entry,PASS
+net.all,category label correct,PASS
+net.all,drive selector enabled only when needed,PASS
+net.all,file chooser enabled only when needed,PASS
+net.all,report chooser enabled only when needed,PASS
+net.all,hostname entry enabled only when needed,PASS
+net.all,port entry enabled only when needed,PASS
+net.all,command explanation available in catalog,PASS
+net.all,copy action unlocked for valid selection,PASS
+net.all,run action unlocked for valid selection,PASS
+net.all,copy button produces exact preview text,PASS
+net.all,copy button updates status,PASS
+net.all,read-only command skips danger confirmation,PASS
+net.all,read-only run reaches launcher,PASS
+net.all,accepted run reaches launch exactly once,PASS
+net.all,correct command instance passed,PASS
+net.all,launch-request dialog shown,PASS
+net.all,failed launch shows error not success,PASS
+net.flush,listbox click selects the correct entry,PASS
+net.flush,category label correct,PASS
+net.flush,drive selector enabled only when needed,PASS
+net.flush,file chooser enabled only when needed,PASS
+net.flush,report chooser enabled only when needed,PASS
+net.flush,hostname entry enabled only when needed,PASS
+net.flush,port entry enabled only when needed,PASS
+net.flush,command explanation available in catalog,PASS
+net.flush,copy action unlocked for valid selection,PASS
+net.flush,run action unlocked for valid selection,PASS
+net.flush,copy button produces exact preview text,PASS
+net.flush,copy button updates status,PASS
+net.flush,danger confirmation shown,PASS
+net.flush,cancel means no execution,PASS
+net.flush,accepted run reaches launch exactly once,PASS
+net.flush,correct command instance passed,PASS
+net.flush,launch-request dialog shown,PASS
+net.flush,failed launch shows error not success,PASS
+net.register,listbox click selects the correct entry,PASS
+net.register,category label correct,PASS
+net.register,drive selector enabled only when needed,PASS
+net.register,file chooser enabled only when needed,PASS
+net.register,report chooser enabled only when needed,PASS
+net.register,hostname entry enabled only when needed,PASS
+net.register,port entry enabled only when needed,PASS
+net.register,command explanation available in catalog,PASS
+net.register,copy action unlocked for valid selection,PASS
+net.register,run action unlocked for valid selection,PASS
+net.register,copy button produces exact preview text,PASS
+net.register,copy button updates status,PASS
+net.register,danger confirmation shown,PASS
+net.register,cancel means no execution,PASS
+net.register,accepted run reaches launch exactly once,PASS
+net.register,correct command instance passed,PASS
+net.register,launch-request dialog shown,PASS
+net.register,failed launch shows error not success,PASS
+net.winsock,listbox click selects the correct entry,PASS
+net.winsock,category label correct,PASS
+net.winsock,drive selector enabled only when needed,PASS
+net.winsock,file chooser enabled only when needed,PASS
+net.winsock,report chooser enabled only when needed,PASS
+net.winsock,hostname entry enabled only when needed,PASS
+net.winsock,port entry enabled only when needed,PASS
+net.winsock,command explanation available in catalog,PASS
+net.winsock,copy action unlocked for valid selection,PASS
+net.winsock,run action unlocked for valid selection,PASS
+net.winsock,copy button produces exact preview text,PASS
+net.winsock,copy button updates status,PASS
+net.winsock,danger confirmation shown,PASS
+net.winsock,cancel means no execution,PASS
+net.winsock,accepted run reaches launch exactly once,PASS
+net.winsock,correct command instance passed,PASS
+net.winsock,launch-request dialog shown,PASS
+net.winsock,failed launch shows error not success,PASS
+net.ipreset,listbox click selects the correct entry,PASS
+net.ipreset,category label correct,PASS
+net.ipreset,drive selector enabled only when needed,PASS
+net.ipreset,file chooser enabled only when needed,PASS
+net.ipreset,report chooser enabled only when needed,PASS
+net.ipreset,hostname entry enabled only when needed,PASS
+net.ipreset,port entry enabled only when needed,PASS
+net.ipreset,command explanation available in catalog,PASS
+net.ipreset,copy action unlocked for valid selection,PASS
+net.ipreset,run action unlocked for valid selection,PASS
+net.ipreset,copy button produces exact preview text,PASS
+net.ipreset,copy button updates status,PASS
+net.ipreset,danger confirmation shown,PASS
+net.ipreset,cancel means no execution,PASS
+net.ipreset,accepted run reaches launch exactly once,PASS
+net.ipreset,correct command instance passed,PASS
+net.ipreset,launch-request dialog shown,PASS
+net.ipreset,failed launch shows error not success,PASS
+diag.reliability,listbox click selects the correct entry,PASS
+diag.reliability,category label correct,PASS
+diag.reliability,drive selector enabled only when needed,PASS
+diag.reliability,file chooser enabled only when needed,PASS
+diag.reliability,report chooser enabled only when needed,PASS
+diag.reliability,hostname entry enabled only when needed,PASS
+diag.reliability,port entry enabled only when needed,PASS
+diag.reliability,command explanation available in catalog,PASS
+diag.reliability,copy action unlocked for valid selection,PASS
+diag.reliability,run action unlocked for valid selection,PASS
+diag.reliability,copy button produces exact preview text,PASS
+diag.reliability,copy button updates status,PASS
+diag.reliability,read-only command skips danger confirmation,PASS
+diag.reliability,read-only run reaches launcher,PASS
+diag.reliability,accepted run reaches launch exactly once,PASS
+diag.reliability,correct command instance passed,PASS
+diag.reliability,launch-request dialog shown,PASS
+diag.reliability,failed launch shows error not success,PASS
+diag.events,listbox click selects the correct entry,PASS
+diag.events,category label correct,PASS
+diag.events,drive selector enabled only when needed,PASS
+diag.events,file chooser enabled only when needed,PASS
+diag.events,report chooser enabled only when needed,PASS
+diag.events,hostname entry enabled only when needed,PASS
+diag.events,port entry enabled only when needed,PASS
+diag.events,command explanation available in catalog,PASS
+diag.events,copy action unlocked for valid selection,PASS
+diag.events,run action unlocked for valid selection,PASS
+diag.events,copy button produces exact preview text,PASS
+diag.events,copy button updates status,PASS
+diag.events,read-only command skips danger confirmation,PASS
+diag.events,read-only run reaches launcher,PASS
+diag.events,accepted run reaches launch exactly once,PASS
+diag.events,correct command instance passed,PASS
+diag.events,launch-request dialog shown,PASS
+diag.events,failed launch shows error not success,PASS
+diag.taskmgr,listbox click selects the correct entry,PASS
+diag.taskmgr,category label correct,PASS
+diag.taskmgr,drive selector enabled only when needed,PASS
+diag.taskmgr,file chooser enabled only when needed,PASS
+diag.taskmgr,report chooser enabled only when needed,PASS
+diag.taskmgr,hostname entry enabled only when needed,PASS
+diag.taskmgr,port entry enabled only when needed,PASS
+diag.taskmgr,command explanation available in catalog,PASS
+diag.taskmgr,copy action unlocked for valid selection,PASS
+diag.taskmgr,run action unlocked for valid selection,PASS
+diag.taskmgr,copy button produces exact preview text,PASS
+diag.taskmgr,copy button updates status,PASS
+diag.taskmgr,read-only command skips danger confirmation,PASS
+diag.taskmgr,read-only run reaches launcher,PASS
+diag.taskmgr,accepted run reaches launch exactly once,PASS
+diag.taskmgr,correct command instance passed,PASS
+diag.taskmgr,launch-request dialog shown,PASS
+diag.taskmgr,failed launch shows error not success,PASS
+ram.resmon,listbox click selects the correct entry,PASS
+ram.resmon,category label correct,PASS
+ram.resmon,drive selector enabled only when needed,PASS
+ram.resmon,file chooser enabled only when needed,PASS
+ram.resmon,report chooser enabled only when needed,PASS
+ram.resmon,hostname entry enabled only when needed,PASS
+ram.resmon,port entry enabled only when needed,PASS
+ram.resmon,command explanation available in catalog,PASS
+ram.resmon,copy action unlocked for valid selection,PASS
+ram.resmon,run action unlocked for valid selection,PASS
+ram.resmon,copy button produces exact preview text,PASS
+ram.resmon,copy button updates status,PASS
+ram.resmon,read-only command skips danger confirmation,PASS
+ram.resmon,read-only run reaches launcher,PASS
+ram.resmon,accepted run reaches launch exactly once,PASS
+ram.resmon,correct command instance passed,PASS
+ram.resmon,launch-request dialog shown,PASS
+ram.resmon,failed launch shows error not success,PASS
+ram.modules,listbox click selects the correct entry,PASS
+ram.modules,category label correct,PASS
+ram.modules,drive selector enabled only when needed,PASS
+ram.modules,file chooser enabled only when needed,PASS
+ram.modules,report chooser enabled only when needed,PASS
+ram.modules,hostname entry enabled only when needed,PASS
+ram.modules,port entry enabled only when needed,PASS
+ram.modules,command explanation available in catalog,PASS
+ram.modules,copy action unlocked for valid selection,PASS
+ram.modules,run action unlocked for valid selection,PASS
+ram.modules,copy button produces exact preview text,PASS
+ram.modules,copy button updates status,PASS
+ram.modules,read-only command skips danger confirmation,PASS
+ram.modules,read-only run reaches launcher,PASS
+ram.modules,accepted run reaches launch exactly once,PASS
+ram.modules,correct command instance passed,PASS
+ram.modules,launch-request dialog shown,PASS
+ram.modules,failed launch shows error not success,PASS
+ram.free,listbox click selects the correct entry,PASS
+ram.free,category label correct,PASS
+ram.free,drive selector enabled only when needed,PASS
+ram.free,file chooser enabled only when needed,PASS
+ram.free,report chooser enabled only when needed,PASS
+ram.free,hostname entry enabled only when needed,PASS
+ram.free,port entry enabled only when needed,PASS
+ram.free,command explanation available in catalog,PASS
+ram.free,copy action unlocked for valid selection,PASS
+ram.free,run action unlocked for valid selection,PASS
+ram.free,copy button produces exact preview text,PASS
+ram.free,copy button updates status,PASS
+ram.free,read-only command skips danger confirmation,PASS
+ram.free,read-only run reaches launcher,PASS
+ram.free,accepted run reaches launch exactly once,PASS
+ram.free,correct command instance passed,PASS
+ram.free,launch-request dialog shown,PASS
+ram.free,failed launch shows error not success,PASS
+ram.top,listbox click selects the correct entry,PASS
+ram.top,category label correct,PASS
+ram.top,drive selector enabled only when needed,PASS
+ram.top,file chooser enabled only when needed,PASS
+ram.top,report chooser enabled only when needed,PASS
+ram.top,hostname entry enabled only when needed,PASS
+ram.top,port entry enabled only when needed,PASS
+ram.top,command explanation available in catalog,PASS
+ram.top,copy action unlocked for valid selection,PASS
+ram.top,run action unlocked for valid selection,PASS
+ram.top,copy button produces exact preview text,PASS
+ram.top,copy button updates status,PASS
+ram.top,read-only command skips danger confirmation,PASS
+ram.top,read-only run reaches launcher,PASS
+ram.top,accepted run reaches launch exactly once,PASS
+ram.top,correct command instance passed,PASS
+ram.top,launch-request dialog shown,PASS
+ram.top,failed launch shows error not success,PASS
+ram.perfmon,listbox click selects the correct entry,PASS
+ram.perfmon,category label correct,PASS
+ram.perfmon,drive selector enabled only when needed,PASS
+ram.perfmon,file chooser enabled only when needed,PASS
+ram.perfmon,report chooser enabled only when needed,PASS
+ram.perfmon,hostname entry enabled only when needed,PASS
+ram.perfmon,port entry enabled only when needed,PASS
+ram.perfmon,command explanation available in catalog,PASS
+ram.perfmon,copy action unlocked for valid selection,PASS
+ram.perfmon,run action unlocked for valid selection,PASS
+ram.perfmon,copy button produces exact preview text,PASS
+ram.perfmon,copy button updates status,PASS
+ram.perfmon,read-only command skips danger confirmation,PASS
+ram.perfmon,read-only run reaches launcher,PASS
+ram.perfmon,accepted run reaches launch exactly once,PASS
+ram.perfmon,correct command instance passed,PASS
+ram.perfmon,launch-request dialog shown,PASS
+ram.perfmon,failed launch shows error not success,PASS
+temp.cleanmgr,listbox click selects the correct entry,PASS
+temp.cleanmgr,category label correct,PASS
+temp.cleanmgr,drive selector enabled only when needed,PASS
+temp.cleanmgr,file chooser enabled only when needed,PASS
+temp.cleanmgr,report chooser enabled only when needed,PASS
+temp.cleanmgr,hostname entry enabled only when needed,PASS
+temp.cleanmgr,port entry enabled only when needed,PASS
+temp.cleanmgr,command explanation available in catalog,PASS
+temp.cleanmgr,copy action unlocked for valid selection,PASS
+temp.cleanmgr,run action unlocked for valid selection,PASS
+temp.cleanmgr,selected D: inserted into command,PASS
+temp.cleanmgr,copy button produces exact preview text,PASS
+temp.cleanmgr,copy button updates status,PASS
+temp.cleanmgr,danger confirmation shown,PASS
+temp.cleanmgr,cancel means no execution,PASS
+temp.cleanmgr,accepted run reaches launch exactly once,PASS
+temp.cleanmgr,correct command instance passed,PASS
+temp.cleanmgr,launch-request dialog shown,PASS
+temp.cleanmgr,failed launch shows error not success,PASS
+temp.storagesense,listbox click selects the correct entry,PASS
+temp.storagesense,category label correct,PASS
+temp.storagesense,drive selector enabled only when needed,PASS
+temp.storagesense,file chooser enabled only when needed,PASS
+temp.storagesense,report chooser enabled only when needed,PASS
+temp.storagesense,hostname entry enabled only when needed,PASS
+temp.storagesense,port entry enabled only when needed,PASS
+temp.storagesense,command explanation available in catalog,PASS
+temp.storagesense,copy action unlocked for valid selection,PASS
+temp.storagesense,run action unlocked for valid selection,PASS
+temp.storagesense,copy button produces exact preview text,PASS
+temp.storagesense,copy button updates status,PASS
+temp.storagesense,read-only command skips danger confirmation,PASS
+temp.storagesense,read-only run reaches launcher,PASS
+temp.storagesense,accepted run reaches launch exactly once,PASS
+temp.storagesense,correct command instance passed,PASS
+temp.storagesense,launch-request dialog shown,PASS
+temp.storagesense,failed launch shows error not success,PASS
+temp.folder,listbox click selects the correct entry,PASS
+temp.folder,category label correct,PASS
+temp.folder,drive selector enabled only when needed,PASS
+temp.folder,file chooser enabled only when needed,PASS
+temp.folder,report chooser enabled only when needed,PASS
+temp.folder,hostname entry enabled only when needed,PASS
+temp.folder,port entry enabled only when needed,PASS
+temp.folder,command explanation available in catalog,PASS
+temp.folder,copy action unlocked for valid selection,PASS
+temp.folder,run action unlocked for valid selection,PASS
+temp.folder,copy button produces exact preview text,PASS
+temp.folder,copy button updates status,PASS
+temp.folder,read-only command skips danger confirmation,PASS
+temp.folder,read-only run reaches launcher,PASS
+temp.folder,accepted run reaches launch exactly once,PASS
+temp.folder,correct command instance passed,PASS
+temp.folder,launch-request dialog shown,PASS
+temp.folder,failed launch shows error not success,PASS
+temp.size,listbox click selects the correct entry,PASS
+temp.size,category label correct,PASS
+temp.size,drive selector enabled only when needed,PASS
+temp.size,file chooser enabled only when needed,PASS
+temp.size,report chooser enabled only when needed,PASS
+temp.size,hostname entry enabled only when needed,PASS
+temp.size,port entry enabled only when needed,PASS
+temp.size,command explanation available in catalog,PASS
+temp.size,copy action unlocked for valid selection,PASS
+temp.size,run action unlocked for valid selection,PASS
+temp.size,copy button produces exact preview text,PASS
+temp.size,copy button updates status,PASS
+temp.size,read-only command skips danger confirmation,PASS
+temp.size,read-only run reaches launcher,PASS
+temp.size,accepted run reaches launch exactly once,PASS
+temp.size,correct command instance passed,PASS
+temp.size,launch-request dialog shown,PASS
+temp.size,failed launch shows error not success,PASS
+temp.oldest,listbox click selects the correct entry,PASS
+temp.oldest,category label correct,PASS
+temp.oldest,drive selector enabled only when needed,PASS
+temp.oldest,file chooser enabled only when needed,PASS
+temp.oldest,report chooser enabled only when needed,PASS
+temp.oldest,hostname entry enabled only when needed,PASS
+temp.oldest,port entry enabled only when needed,PASS
+temp.oldest,command explanation available in catalog,PASS
+temp.oldest,copy action unlocked for valid selection,PASS
+temp.oldest,run action unlocked for valid selection,PASS
+temp.oldest,copy button produces exact preview text,PASS
+temp.oldest,copy button updates status,PASS
+temp.oldest,read-only command skips danger confirmation,PASS
+temp.oldest,read-only run reaches launcher,PASS
+temp.oldest,accepted run reaches launch exactly once,PASS
+temp.oldest,correct command instance passed,PASS
+temp.oldest,launch-request dialog shown,PASS
+temp.oldest,failed launch shows error not success,PASS
+temp.store,listbox click selects the correct entry,PASS
+temp.store,category label correct,PASS
+temp.store,drive selector enabled only when needed,PASS
+temp.store,file chooser enabled only when needed,PASS
+temp.store,report chooser enabled only when needed,PASS
+temp.store,hostname entry enabled only when needed,PASS
+temp.store,port entry enabled only when needed,PASS
+temp.store,command explanation available in catalog,PASS
+temp.store,copy action unlocked for valid selection,PASS
+temp.store,run action unlocked for valid selection,PASS
+temp.store,copy button produces exact preview text,PASS
+temp.store,copy button updates status,PASS
+temp.store,danger confirmation shown,PASS
+temp.store,cancel means no execution,PASS
+temp.store,accepted run reaches launch exactly once,PASS
+temp.store,correct command instance passed,PASS
+temp.store,launch-request dialog shown,PASS
+temp.store,failed launch shows error not success,PASS
+temp.component,listbox click selects the correct entry,PASS
+temp.component,category label correct,PASS
+temp.component,drive selector enabled only when needed,PASS
+temp.component,file chooser enabled only when needed,PASS
+temp.component,report chooser enabled only when needed,PASS
+temp.component,hostname entry enabled only when needed,PASS
+temp.component,port entry enabled only when needed,PASS
+temp.component,command explanation available in catalog,PASS
+temp.component,copy action unlocked for valid selection,PASS
+temp.component,run action unlocked for valid selection,PASS
+temp.component,copy button produces exact preview text,PASS
+temp.component,copy button updates status,PASS
+temp.component,danger confirmation shown,PASS
+temp.component,cancel means no execution,PASS
+temp.component,accepted run reaches launch exactly once,PASS
+temp.component,correct command instance passed,PASS
+temp.component,launch-request dialog shown,PASS
+temp.component,failed launch shows error not success,PASS
+disk.counters,listbox click selects the correct entry,PASS
+disk.counters,category label correct,PASS
+disk.counters,drive selector enabled only when needed,PASS
+disk.counters,file chooser enabled only when needed,PASS
+disk.counters,report chooser enabled only when needed,PASS
+disk.counters,hostname entry enabled only when needed,PASS
+disk.counters,port entry enabled only when needed,PASS
+disk.counters,command explanation available in catalog,PASS
+disk.counters,copy action unlocked for valid selection,PASS
+disk.counters,run action unlocked for valid selection,PASS
+disk.counters,copy button produces exact preview text,PASS
+disk.counters,copy button updates status,PASS
+disk.counters,read-only command skips danger confirmation,PASS
+disk.counters,read-only run reaches launcher,PASS
+disk.counters,accepted run reaches launch exactly once,PASS
+disk.counters,correct command instance passed,PASS
+disk.counters,launch-request dialog shown,PASS
+disk.counters,failed launch shows error not success,PASS
+disk.analyze,listbox click selects the correct entry,PASS
+disk.analyze,category label correct,PASS
+disk.analyze,drive selector enabled only when needed,PASS
+disk.analyze,file chooser enabled only when needed,PASS
+disk.analyze,report chooser enabled only when needed,PASS
+disk.analyze,hostname entry enabled only when needed,PASS
+disk.analyze,port entry enabled only when needed,PASS
+disk.analyze,command explanation available in catalog,PASS
+disk.analyze,copy action unlocked for valid selection,PASS
+disk.analyze,run action unlocked for valid selection,PASS
+disk.analyze,selected D: inserted into command,PASS
+disk.analyze,copy button produces exact preview text,PASS
+disk.analyze,copy button updates status,PASS
+disk.analyze,read-only command skips danger confirmation,PASS
+disk.analyze,read-only run reaches launcher,PASS
+disk.analyze,accepted run reaches launch exactly once,PASS
+disk.analyze,correct command instance passed,PASS
+disk.analyze,launch-request dialog shown,PASS
+disk.analyze,failed launch shows error not success,PASS
+disk.optimize,listbox click selects the correct entry,PASS
+disk.optimize,category label correct,PASS
+disk.optimize,drive selector enabled only when needed,PASS
+disk.optimize,file chooser enabled only when needed,PASS
+disk.optimize,report chooser enabled only when needed,PASS
+disk.optimize,hostname entry enabled only when needed,PASS
+disk.optimize,port entry enabled only when needed,PASS
+disk.optimize,command explanation available in catalog,PASS
+disk.optimize,copy action unlocked for valid selection,PASS
+disk.optimize,run action unlocked for valid selection,PASS
+disk.optimize,selected D: inserted into command,PASS
+disk.optimize,copy button produces exact preview text,PASS
+disk.optimize,copy button updates status,PASS
+disk.optimize,danger confirmation shown,PASS
+disk.optimize,cancel means no execution,PASS
+disk.optimize,accepted run reaches launch exactly once,PASS
+disk.optimize,correct command instance passed,PASS
+disk.optimize,launch-request dialog shown,PASS
+disk.optimize,failed launch shows error not success,PASS
+disk.dirty,listbox click selects the correct entry,PASS
+disk.dirty,category label correct,PASS
+disk.dirty,drive selector enabled only when needed,PASS
+disk.dirty,file chooser enabled only when needed,PASS
+disk.dirty,report chooser enabled only when needed,PASS
+disk.dirty,hostname entry enabled only when needed,PASS
+disk.dirty,port entry enabled only when needed,PASS
+disk.dirty,command explanation available in catalog,PASS
+disk.dirty,copy action unlocked for valid selection,PASS
+disk.dirty,run action unlocked for valid selection,PASS
+disk.dirty,selected D: inserted into command,PASS
+disk.dirty,copy button produces exact preview text,PASS
+disk.dirty,copy button updates status,PASS
+disk.dirty,read-only command skips danger confirmation,PASS
+disk.dirty,read-only run reaches launcher,PASS
+disk.dirty,accepted run reaches launch exactly once,PASS
+disk.dirty,correct command instance passed,PASS
+disk.dirty,launch-request dialog shown,PASS
+disk.dirty,failed launch shows error not success,PASS
+disk.bitlocker,listbox click selects the correct entry,PASS
+disk.bitlocker,category label correct,PASS
+disk.bitlocker,drive selector enabled only when needed,PASS
+disk.bitlocker,file chooser enabled only when needed,PASS
+disk.bitlocker,report chooser enabled only when needed,PASS
+disk.bitlocker,hostname entry enabled only when needed,PASS
+disk.bitlocker,port entry enabled only when needed,PASS
+disk.bitlocker,command explanation available in catalog,PASS
+disk.bitlocker,copy action unlocked for valid selection,PASS
+disk.bitlocker,run action unlocked for valid selection,PASS
+disk.bitlocker,selected D: inserted into command,PASS
+disk.bitlocker,copy button produces exact preview text,PASS
+disk.bitlocker,copy button updates status,PASS
+disk.bitlocker,read-only command skips danger confirmation,PASS
+disk.bitlocker,read-only run reaches launcher,PASS
+disk.bitlocker,accepted run reaches launch exactly once,PASS
+disk.bitlocker,correct command instance passed,PASS
+disk.bitlocker,launch-request dialog shown,PASS
+disk.bitlocker,failed launch shows error not success,PASS
+boot.startup,listbox click selects the correct entry,PASS
+boot.startup,category label correct,PASS
+boot.startup,drive selector enabled only when needed,PASS
+boot.startup,file chooser enabled only when needed,PASS
+boot.startup,report chooser enabled only when needed,PASS
+boot.startup,hostname entry enabled only when needed,PASS
+boot.startup,port entry enabled only when needed,PASS
+boot.startup,command explanation available in catalog,PASS
+boot.startup,copy action unlocked for valid selection,PASS
+boot.startup,run action unlocked for valid selection,PASS
+boot.startup,copy button produces exact preview text,PASS
+boot.startup,copy button updates status,PASS
+boot.startup,read-only command skips danger confirmation,PASS
+boot.startup,read-only run reaches launcher,PASS
+boot.startup,accepted run reaches launch exactly once,PASS
+boot.startup,correct command instance passed,PASS
+boot.startup,launch-request dialog shown,PASS
+boot.startup,failed launch shows error not success,PASS
+boot.services,listbox click selects the correct entry,PASS
+boot.services,category label correct,PASS
+boot.services,drive selector enabled only when needed,PASS
+boot.services,file chooser enabled only when needed,PASS
+boot.services,report chooser enabled only when needed,PASS
+boot.services,hostname entry enabled only when needed,PASS
+boot.services,port entry enabled only when needed,PASS
+boot.services,command explanation available in catalog,PASS
+boot.services,copy action unlocked for valid selection,PASS
+boot.services,run action unlocked for valid selection,PASS
+boot.services,copy button produces exact preview text,PASS
+boot.services,copy button updates status,PASS
+boot.services,read-only command skips danger confirmation,PASS
+boot.services,read-only run reaches launcher,PASS
+boot.services,accepted run reaches launch exactly once,PASS
+boot.services,correct command instance passed,PASS
+boot.services,launch-request dialog shown,PASS
+boot.services,failed launch shows error not success,PASS
+boot.devices,listbox click selects the correct entry,PASS
+boot.devices,category label correct,PASS
+boot.devices,drive selector enabled only when needed,PASS
+boot.devices,file chooser enabled only when needed,PASS
+boot.devices,report chooser enabled only when needed,PASS
+boot.devices,hostname entry enabled only when needed,PASS
+boot.devices,port entry enabled only when needed,PASS
+boot.devices,command explanation available in catalog,PASS
+boot.devices,copy action unlocked for valid selection,PASS
+boot.devices,run action unlocked for valid selection,PASS
+boot.devices,copy button produces exact preview text,PASS
+boot.devices,copy button updates status,PASS
+boot.devices,read-only command skips danger confirmation,PASS
+boot.devices,read-only run reaches launcher,PASS
+boot.devices,accepted run reaches launch exactly once,PASS
+boot.devices,correct command instance passed,PASS
+boot.devices,launch-request dialog shown,PASS
+boot.devices,failed launch shows error not success,PASS
+boot.dxdiag,listbox click selects the correct entry,PASS
+boot.dxdiag,category label correct,PASS
+boot.dxdiag,drive selector enabled only when needed,PASS
+boot.dxdiag,file chooser enabled only when needed,PASS
+boot.dxdiag,report chooser enabled only when needed,PASS
+boot.dxdiag,hostname entry enabled only when needed,PASS
+boot.dxdiag,port entry enabled only when needed,PASS
+boot.dxdiag,command explanation available in catalog,PASS
+boot.dxdiag,copy action unlocked for valid selection,PASS
+boot.dxdiag,run action unlocked for valid selection,PASS
+boot.dxdiag,copy button produces exact preview text,PASS
+boot.dxdiag,copy button updates status,PASS
+boot.dxdiag,read-only command skips danger confirmation,PASS
+boot.dxdiag,read-only run reaches launcher,PASS
+boot.dxdiag,accepted run reaches launch exactly once,PASS
+boot.dxdiag,correct command instance passed,PASS
+boot.dxdiag,launch-request dialog shown,PASS
+boot.dxdiag,failed launch shows error not success,PASS
+net.dnscache,listbox click selects the correct entry,PASS
+net.dnscache,category label correct,PASS
+net.dnscache,drive selector enabled only when needed,PASS
+net.dnscache,file chooser enabled only when needed,PASS
+net.dnscache,report chooser enabled only when needed,PASS
+net.dnscache,hostname entry enabled only when needed,PASS
+net.dnscache,port entry enabled only when needed,PASS
+net.dnscache,command explanation available in catalog,PASS
+net.dnscache,copy action unlocked for valid selection,PASS
+net.dnscache,run action unlocked for valid selection,PASS
+net.dnscache,copy button produces exact preview text,PASS
+net.dnscache,copy button updates status,PASS
+net.dnscache,read-only command skips danger confirmation,PASS
+net.dnscache,read-only run reaches launcher,PASS
+net.dnscache,accepted run reaches launch exactly once,PASS
+net.dnscache,correct command instance passed,PASS
+net.dnscache,launch-request dialog shown,PASS
+net.dnscache,failed launch shows error not success,PASS
+net.wlan,listbox click selects the correct entry,PASS
+net.wlan,category label correct,PASS
+net.wlan,drive selector enabled only when needed,PASS
+net.wlan,file chooser enabled only when needed,PASS
+net.wlan,report chooser enabled only when needed,PASS
+net.wlan,hostname entry enabled only when needed,PASS
+net.wlan,port entry enabled only when needed,PASS
+net.wlan,command explanation available in catalog,PASS
+net.wlan,copy action unlocked for valid selection,PASS
+net.wlan,run action unlocked for valid selection,PASS
+net.wlan,copy button produces exact preview text,PASS
+net.wlan,copy button updates status,PASS
+net.wlan,read-only command skips danger confirmation,PASS
+net.wlan,read-only run reaches launcher,PASS
+net.wlan,accepted run reaches launch exactly once,PASS
+net.wlan,correct command instance passed,PASS
+net.wlan,launch-request dialog shown,PASS
+net.wlan,failed launch shows error not success,PASS
+net.wlanreport,listbox click selects the correct entry,PASS
+net.wlanreport,category label correct,PASS
+net.wlanreport,drive selector enabled only when needed,PASS
+net.wlanreport,file chooser enabled only when needed,PASS
+net.wlanreport,report chooser enabled only when needed,PASS
+net.wlanreport,hostname entry enabled only when needed,PASS
+net.wlanreport,port entry enabled only when needed,PASS
+net.wlanreport,command explanation available in catalog,PASS
+net.wlanreport,copy action unlocked for valid selection,PASS
+net.wlanreport,run action unlocked for valid selection,PASS
+net.wlanreport,copy button produces exact preview text,PASS
+net.wlanreport,copy button updates status,PASS
+net.wlanreport,danger confirmation shown,PASS
+net.wlanreport,cancel means no execution,PASS
+net.wlanreport,accepted run reaches launch exactly once,PASS
+net.wlanreport,correct command instance passed,PASS
+net.wlanreport,launch-request dialog shown,PASS
+net.wlanreport,failed launch shows error not success,PASS
+net.netstat,listbox click selects the correct entry,PASS
+net.netstat,category label correct,PASS
+net.netstat,drive selector enabled only when needed,PASS
+net.netstat,file chooser enabled only when needed,PASS
+net.netstat,report chooser enabled only when needed,PASS
+net.netstat,hostname entry enabled only when needed,PASS
+net.netstat,port entry enabled only when needed,PASS
+net.netstat,command explanation available in catalog,PASS
+net.netstat,copy action unlocked for valid selection,PASS
+net.netstat,run action unlocked for valid selection,PASS
+net.netstat,copy button produces exact preview text,PASS
+net.netstat,copy button updates status,PASS
+net.netstat,read-only command skips danger confirmation,PASS
+net.netstat,read-only run reaches launcher,PASS
+net.netstat,accepted run reaches launch exactly once,PASS
+net.netstat,correct command instance passed,PASS
+net.netstat,launch-request dialog shown,PASS
+net.netstat,failed launch shows error not success,PASS
+power.states,listbox click selects the correct entry,PASS
+power.states,category label correct,PASS
+power.states,drive selector enabled only when needed,PASS
+power.states,file chooser enabled only when needed,PASS
+power.states,report chooser enabled only when needed,PASS
+power.states,hostname entry enabled only when needed,PASS
+power.states,port entry enabled only when needed,PASS
+power.states,command explanation available in catalog,PASS
+power.states,copy action unlocked for valid selection,PASS
+power.states,run action unlocked for valid selection,PASS
+power.states,copy button produces exact preview text,PASS
+power.states,copy button updates status,PASS
+power.states,read-only command skips danger confirmation,PASS
+power.states,read-only run reaches launcher,PASS
+power.states,accepted run reaches launch exactly once,PASS
+power.states,correct command instance passed,PASS
+power.states,launch-request dialog shown,PASS
+power.states,failed launch shows error not success,PASS
+power.requests,listbox click selects the correct entry,PASS
+power.requests,category label correct,PASS
+power.requests,drive selector enabled only when needed,PASS
+power.requests,file chooser enabled only when needed,PASS
+power.requests,report chooser enabled only when needed,PASS
+power.requests,hostname entry enabled only when needed,PASS
+power.requests,port entry enabled only when needed,PASS
+power.requests,command explanation available in catalog,PASS
+power.requests,copy action unlocked for valid selection,PASS
+power.requests,run action unlocked for valid selection,PASS
+power.requests,copy button produces exact preview text,PASS
+power.requests,copy button updates status,PASS
+power.requests,read-only command skips danger confirmation,PASS
+power.requests,read-only run reaches launcher,PASS
+power.requests,accepted run reaches launch exactly once,PASS
+power.requests,correct command instance passed,PASS
+power.requests,launch-request dialog shown,PASS
+power.requests,failed launch shows error not success,PASS
+power.wake,listbox click selects the correct entry,PASS
+power.wake,category label correct,PASS
+power.wake,drive selector enabled only when needed,PASS
+power.wake,file chooser enabled only when needed,PASS
+power.wake,report chooser enabled only when needed,PASS
+power.wake,hostname entry enabled only when needed,PASS
+power.wake,port entry enabled only when needed,PASS
+power.wake,command explanation available in catalog,PASS
+power.wake,copy action unlocked for valid selection,PASS
+power.wake,run action unlocked for valid selection,PASS
+power.wake,copy button produces exact preview text,PASS
+power.wake,copy button updates status,PASS
+power.wake,read-only command skips danger confirmation,PASS
+power.wake,read-only run reaches launcher,PASS
+power.wake,accepted run reaches launch exactly once,PASS
+power.wake,correct command instance passed,PASS
+power.wake,launch-request dialog shown,PASS
+power.wake,failed launch shows error not success,PASS
+power.battery,listbox click selects the correct entry,PASS
+power.battery,category label correct,PASS
+power.battery,drive selector enabled only when needed,PASS
+power.battery,file chooser enabled only when needed,PASS
+power.battery,report chooser enabled only when needed,PASS
+power.battery,hostname entry enabled only when needed,PASS
+power.battery,port entry enabled only when needed,PASS
+power.battery,command explanation available in catalog,PASS
+power.battery,action initially locked until target chosen,PASS
+power.battery,report chooser populates a valid target,PASS
+power.battery,copy action unlocked for valid selection,PASS
+power.battery,run action unlocked for valid selection,PASS
+power.battery,copy button produces exact preview text,PASS
+power.battery,copy button updates status,PASS
+power.battery,danger confirmation shown,PASS
+power.battery,cancel means no execution,PASS
+power.battery,accepted run reaches launch exactly once,PASS
+power.battery,correct command instance passed,PASS
+power.battery,launch-request dialog shown,PASS
+power.battery,failed launch shows error not success,PASS
+power.energy,listbox click selects the correct entry,PASS
+power.energy,category label correct,PASS
+power.energy,drive selector enabled only when needed,PASS
+power.energy,file chooser enabled only when needed,PASS
+power.energy,report chooser enabled only when needed,PASS
+power.energy,hostname entry enabled only when needed,PASS
+power.energy,port entry enabled only when needed,PASS
+power.energy,command explanation available in catalog,PASS
+power.energy,action initially locked until target chosen,PASS
+power.energy,report chooser populates a valid target,PASS
+power.energy,copy action unlocked for valid selection,PASS
+power.energy,run action unlocked for valid selection,PASS
+power.energy,copy button produces exact preview text,PASS
+power.energy,copy button updates status,PASS
+power.energy,danger confirmation shown,PASS
+power.energy,cancel means no execution,PASS
+power.energy,accepted run reaches launch exactly once,PASS
+power.energy,correct command instance passed,PASS
+power.energy,launch-request dialog shown,PASS
+power.energy,failed launch shows error not success,PASS
+diag.syserrors,listbox click selects the correct entry,PASS
+diag.syserrors,category label correct,PASS
+diag.syserrors,drive selector enabled only when needed,PASS
+diag.syserrors,file chooser enabled only when needed,PASS
+diag.syserrors,report chooser enabled only when needed,PASS
+diag.syserrors,hostname entry enabled only when needed,PASS
+diag.syserrors,port entry enabled only when needed,PASS
+diag.syserrors,command explanation available in catalog,PASS
+diag.syserrors,copy action unlocked for valid selection,PASS
+diag.syserrors,run action unlocked for valid selection,PASS
+diag.syserrors,copy button produces exact preview text,PASS
+diag.syserrors,copy button updates status,PASS
+diag.syserrors,read-only command skips danger confirmation,PASS
+diag.syserrors,read-only run reaches launcher,PASS
+diag.syserrors,accepted run reaches launch exactly once,PASS
+diag.syserrors,correct command instance passed,PASS
+diag.syserrors,launch-request dialog shown,PASS
+diag.syserrors,failed launch shows error not success,PASS
+diag.hotfixes,listbox click selects the correct entry,PASS
+diag.hotfixes,category label correct,PASS
+diag.hotfixes,drive selector enabled only when needed,PASS
+diag.hotfixes,file chooser enabled only when needed,PASS
+diag.hotfixes,report chooser enabled only when needed,PASS
+diag.hotfixes,hostname entry enabled only when needed,PASS
+diag.hotfixes,port entry enabled only when needed,PASS
+diag.hotfixes,command explanation available in catalog,PASS
+diag.hotfixes,copy action unlocked for valid selection,PASS
+diag.hotfixes,run action unlocked for valid selection,PASS
+diag.hotfixes,copy button produces exact preview text,PASS
+diag.hotfixes,copy button updates status,PASS
+diag.hotfixes,read-only command skips danger confirmation,PASS
+diag.hotfixes,read-only run reaches launcher,PASS
+diag.hotfixes,accepted run reaches launch exactly once,PASS
+diag.hotfixes,correct command instance passed,PASS
+diag.hotfixes,launch-request dialog shown,PASS
+diag.hotfixes,failed launch shows error not success,PASS
+diag.recovery,listbox click selects the correct entry,PASS
+diag.recovery,category label correct,PASS
+diag.recovery,drive selector enabled only when needed,PASS
+diag.recovery,file chooser enabled only when needed,PASS
+diag.recovery,report chooser enabled only when needed,PASS
+diag.recovery,hostname entry enabled only when needed,PASS
+diag.recovery,port entry enabled only when needed,PASS
+diag.recovery,command explanation available in catalog,PASS
+diag.recovery,copy action unlocked for valid selection,PASS
+diag.recovery,run action unlocked for valid selection,PASS
+diag.recovery,copy button produces exact preview text,PASS
+diag.recovery,copy button updates status,PASS
+diag.recovery,read-only command skips danger confirmation,PASS
+diag.recovery,read-only run reaches launcher,PASS
+diag.recovery,accepted run reaches launch exactly once,PASS
+diag.recovery,correct command instance passed,PASS
+diag.recovery,launch-request dialog shown,PASS
+diag.recovery,failed launch shows error not success,PASS
+diag.defender,listbox click selects the correct entry,PASS
+diag.defender,category label correct,PASS
+diag.defender,drive selector enabled only when needed,PASS
+diag.defender,file chooser enabled only when needed,PASS
+diag.defender,report chooser enabled only when needed,PASS
+diag.defender,hostname entry enabled only when needed,PASS
+diag.defender,port entry enabled only when needed,PASS
+diag.defender,command explanation available in catalog,PASS
+diag.defender,copy action unlocked for valid selection,PASS
+diag.defender,run action unlocked for valid selection,PASS
+diag.defender,copy button produces exact preview text,PASS
+diag.defender,copy button updates status,PASS
+diag.defender,read-only command skips danger confirmation,PASS
+diag.defender,read-only run reaches launcher,PASS
+diag.defender,accepted run reaches launch exactly once,PASS
+diag.defender,correct command instance passed,PASS
+diag.defender,launch-request dialog shown,PASS
+diag.defender,failed launch shows error not success,PASS
+boot.pnp_problems,listbox click selects the correct entry,PASS
+boot.pnp_problems,category label correct,PASS
+boot.pnp_problems,drive selector enabled only when needed,PASS
+boot.pnp_problems,file chooser enabled only when needed,PASS
+boot.pnp_problems,report chooser enabled only when needed,PASS
+boot.pnp_problems,hostname entry enabled only when needed,PASS
+boot.pnp_problems,port entry enabled only when needed,PASS
+boot.pnp_problems,command explanation available in catalog,PASS
+boot.pnp_problems,copy action unlocked for valid selection,PASS
+boot.pnp_problems,run action unlocked for valid selection,PASS
+boot.pnp_problems,copy button produces exact preview text,PASS
+boot.pnp_problems,copy button updates status,PASS
+boot.pnp_problems,read-only command skips danger confirmation,PASS
+boot.pnp_problems,read-only run reaches launcher,PASS
+boot.pnp_problems,accepted run reaches launch exactly once,PASS
+boot.pnp_problems,correct command instance passed,PASS
+boot.pnp_problems,launch-request dialog shown,PASS
+boot.pnp_problems,failed launch shows error not success,PASS
+boot.pnp_drivers,listbox click selects the correct entry,PASS
+boot.pnp_drivers,category label correct,PASS
+boot.pnp_drivers,drive selector enabled only when needed,PASS
+boot.pnp_drivers,file chooser enabled only when needed,PASS
+boot.pnp_drivers,report chooser enabled only when needed,PASS
+boot.pnp_drivers,hostname entry enabled only when needed,PASS
+boot.pnp_drivers,port entry enabled only when needed,PASS
+boot.pnp_drivers,command explanation available in catalog,PASS
+boot.pnp_drivers,copy action unlocked for valid selection,PASS
+boot.pnp_drivers,run action unlocked for valid selection,PASS
+boot.pnp_drivers,copy button produces exact preview text,PASS
+boot.pnp_drivers,copy button updates status,PASS
+boot.pnp_drivers,read-only command skips danger confirmation,PASS
+boot.pnp_drivers,read-only run reaches launcher,PASS
+boot.pnp_drivers,accepted run reaches launch exactly once,PASS
+boot.pnp_drivers,correct command instance passed,PASS
+boot.pnp_drivers,launch-request dialog shown,PASS
+boot.pnp_drivers,failed launch shows error not success,PASS
+net.adapters,listbox click selects the correct entry,PASS
+net.adapters,category label correct,PASS
+net.adapters,drive selector enabled only when needed,PASS
+net.adapters,file chooser enabled only when needed,PASS
+net.adapters,report chooser enabled only when needed,PASS
+net.adapters,hostname entry enabled only when needed,PASS
+net.adapters,port entry enabled only when needed,PASS
+net.adapters,command explanation available in catalog,PASS
+net.adapters,copy action unlocked for valid selection,PASS
+net.adapters,run action unlocked for valid selection,PASS
+net.adapters,copy button produces exact preview text,PASS
+net.adapters,copy button updates status,PASS
+net.adapters,read-only command skips danger confirmation,PASS
+net.adapters,read-only run reaches launcher,PASS
+net.adapters,accepted run reaches launch exactly once,PASS
+net.adapters,correct command instance passed,PASS
+net.adapters,launch-request dialog shown,PASS
+net.adapters,failed launch shows error not success,PASS
+net.test_connection,listbox click selects the correct entry,PASS
+net.test_connection,category label correct,PASS
+net.test_connection,drive selector enabled only when needed,PASS
+net.test_connection,file chooser enabled only when needed,PASS
+net.test_connection,report chooser enabled only when needed,PASS
+net.test_connection,hostname entry enabled only when needed,PASS
+net.test_connection,port entry enabled only when needed,PASS
+net.test_connection,command explanation available in catalog,PASS
+net.test_connection,copy action unlocked for valid selection,PASS
+net.test_connection,run action unlocked for valid selection,PASS
+net.test_connection,copy button produces exact preview text,PASS
+net.test_connection,copy button updates status,PASS
+net.test_connection,read-only command skips danger confirmation,PASS
+net.test_connection,read-only run reaches launcher,PASS
+net.test_connection,accepted run reaches launch exactly once,PASS
+net.test_connection,correct command instance passed,PASS
+net.test_connection,launch-request dialog shown,PASS
+net.test_connection,failed launch shows error not success,PASS
+diag.winget,listbox click selects the correct entry,PASS
+diag.winget,category label correct,PASS
+diag.winget,drive selector enabled only when needed,PASS
+diag.winget,file chooser enabled only when needed,PASS
+diag.winget,report chooser enabled only when needed,PASS
+diag.winget,hostname entry enabled only when needed,PASS
+diag.winget,port entry enabled only when needed,PASS
+diag.winget,command explanation available in catalog,PASS
+diag.winget,copy action unlocked for valid selection,PASS
+diag.winget,run action unlocked for valid selection,PASS
+diag.winget,copy button produces exact preview text,PASS
+diag.winget,copy button updates status,PASS
+diag.winget,read-only command skips danger confirmation,PASS
+diag.winget,read-only run reaches launcher,PASS
+diag.winget,accepted run reaches launch exactly once,PASS
+diag.winget,correct command instance passed,PASS
+diag.winget,launch-request dialog shown,PASS
+diag.winget,failed launch shows error not success,PASS
+power.sleepstudy,listbox click selects the correct entry,PASS
+power.sleepstudy,category label correct,PASS
+power.sleepstudy,drive selector enabled only when needed,PASS
+power.sleepstudy,file chooser enabled only when needed,PASS
+power.sleepstudy,report chooser enabled only when needed,PASS
+power.sleepstudy,hostname entry enabled only when needed,PASS
+power.sleepstudy,port entry enabled only when needed,PASS
+power.sleepstudy,command explanation available in catalog,PASS
+power.sleepstudy,action initially locked until target chosen,PASS
+power.sleepstudy,report chooser populates a valid target,PASS
+power.sleepstudy,copy action unlocked for valid selection,PASS
+power.sleepstudy,run action unlocked for valid selection,PASS
+power.sleepstudy,copy button produces exact preview text,PASS
+power.sleepstudy,copy button updates status,PASS
+power.sleepstudy,danger confirmation shown,PASS
+power.sleepstudy,cancel means no execution,PASS
+power.sleepstudy,accepted run reaches launch exactly once,PASS
+power.sleepstudy,correct command instance passed,PASS
+power.sleepstudy,launch-request dialog shown,PASS
+power.sleepstudy,failed launch shows error not success,PASS
+diag.group_policy,listbox click selects the correct entry,PASS
+diag.group_policy,category label correct,PASS
+diag.group_policy,drive selector enabled only when needed,PASS
+diag.group_policy,file chooser enabled only when needed,PASS
+diag.group_policy,report chooser enabled only when needed,PASS
+diag.group_policy,hostname entry enabled only when needed,PASS
+diag.group_policy,port entry enabled only when needed,PASS
+diag.group_policy,command explanation available in catalog,PASS
+diag.group_policy,copy action unlocked for valid selection,PASS
+diag.group_policy,run action unlocked for valid selection,PASS
+diag.group_policy,copy button produces exact preview text,PASS
+diag.group_policy,copy button updates status,PASS
+diag.group_policy,read-only command skips danger confirmation,PASS
+diag.group_policy,read-only run reaches launcher,PASS
+diag.group_policy,accepted run reaches launch exactly once,PASS
+diag.group_policy,correct command instance passed,PASS
+diag.group_policy,launch-request dialog shown,PASS
+diag.group_policy,failed launch shows error not success,PASS
+diag.wmi_verify,listbox click selects the correct entry,PASS
+diag.wmi_verify,category label correct,PASS
+diag.wmi_verify,drive selector enabled only when needed,PASS
+diag.wmi_verify,file chooser enabled only when needed,PASS
+diag.wmi_verify,report chooser enabled only when needed,PASS
+diag.wmi_verify,hostname entry enabled only when needed,PASS
+diag.wmi_verify,port entry enabled only when needed,PASS
+diag.wmi_verify,command explanation available in catalog,PASS
+diag.wmi_verify,copy action unlocked for valid selection,PASS
+diag.wmi_verify,run action unlocked for valid selection,PASS
+diag.wmi_verify,copy button produces exact preview text,PASS
+diag.wmi_verify,copy button updates status,PASS
+diag.wmi_verify,read-only command skips danger confirmation,PASS
+diag.wmi_verify,read-only run reaches launcher,PASS
+diag.wmi_verify,accepted run reaches launch exactly once,PASS
+diag.wmi_verify,correct command instance passed,PASS
+diag.wmi_verify,launch-request dialog shown,PASS
+diag.wmi_verify,failed launch shows error not success,PASS
+diag.whoami,listbox click selects the correct entry,PASS
+diag.whoami,category label correct,PASS
+diag.whoami,drive selector enabled only when needed,PASS
+diag.whoami,file chooser enabled only when needed,PASS
+diag.whoami,report chooser enabled only when needed,PASS
+diag.whoami,hostname entry enabled only when needed,PASS
+diag.whoami,port entry enabled only when needed,PASS
+diag.whoami,command explanation available in catalog,PASS
+diag.whoami,copy action unlocked for valid selection,PASS
+diag.whoami,run action unlocked for valid selection,PASS
+diag.whoami,copy button produces exact preview text,PASS
+diag.whoami,copy button updates status,PASS
+diag.whoami,read-only command skips danger confirmation,PASS
+diag.whoami,read-only run reaches launcher,PASS
+diag.whoami,accepted run reaches launch exactly once,PASS
+diag.whoami,correct command instance passed,PASS
+diag.whoami,launch-request dialog shown,PASS
+diag.whoami,failed launch shows error not success,PASS
+NETWORK,injected hostname locks actions,PASS
+NETWORK,invalid port locks actions,PASS
+NETWORK,valid network target unlocks actions,PASS
+NETWORK,custom host and port appear in copy,PASS
+SEARCH,sfc result count correct,PASS
+SEARCH,ram result count correct,PASS
+SEARCH,DNS result count correct,PASS
+SEARCH,temporary result count correct,PASS
+SEARCH,recovery result count correct,PASS
+SEARCH,powercfg result count correct,PASS
+SEARCH,no-such-command-xyz result count correct,PASS
+SEARCH,no hits disables run,PASS
+SEARCH,no hits disables copy,PASS
+SEARCH,refresh drive cannot reactivate empty list,PASS
+FILTER,Windows files lists only its commands,PASS
+FILTER,Windows image (DISM) lists only its commands,PASS
+FILTER,Disk & storage lists only its commands,PASS
+FILTER,Hardware & diagnostics lists only its commands,PASS
+FILTER,Activation & licensing lists only its commands,PASS
+FILTER,Networking lists only its commands,PASS
+FILTER,Logs & monitoring lists only its commands,PASS
+FILTER,RAM & performance lists only its commands,PASS
+FILTER,Temporary files lists only its commands,PASS
+FILTER,Startup & drivers lists only its commands,PASS
+FILTER,Power & battery lists only its commands,PASS
+KEYBOARD,Ctrl+F focuses search box,PASS
+LAYOUT,1080x620 report control reachable after scrolling,PASS
+LAYOUT,1080x620 bottom action controls visible,PASS
+LAYOUT,1200x700 report control reachable after scrolling,PASS
+LAYOUT,1200x700 bottom action controls visible,PASS
+LAYOUT,1460x865 report control reachable after scrolling,PASS
+LAYOUT,1460x865 bottom action controls visible,PASS
+DRIVES,no detected volumes disables drive picker,PASS
+DRIVES,no detected volumes disables run and copy,PASS
+DRIVES,no detected volumes clears selected drive,PASS
+DRIVES,forced run refuses missing drive,PASS
+DRIVES,drive list can recover with only D:,PASS
+MISC,small copy icon present,PASS
+MISC,small copy icon copies command,PASS
+MISC,double-click copy binding installed,PASS
+MISC,TEMP button requests the cleaner dialog,PASS
+MISC,non-Windows execution shows explicit warning,PASS
+MISC,scroll wheel moves middle panel,PASS
+MISC,official documentation link visible for sourced command,PASS
+MISC,documentation link opens official URL,PASS
+FILE,unsafe file path blocked,PASS
+FILE,unsafe file keeps run disabled,PASS
+FILE,cancel file picker no crash,PASS
+REPORT,cancel save picker retains disabled run,PASS
+REPORT,unsafe save path blocked,PASS

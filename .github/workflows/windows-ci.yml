@@ -1,0 +1,39 @@
+name: Windows tests and beta EXE build
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  windows-tests-and-build:
+    name: Tests and unsigned beta build (Windows)
+    runs-on: windows-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compile Python modules
+        run: python -m compileall -q app.py command_catalog.py windows_launcher.py temp_cleaner.py tests
+      - name: Run unit tests (simulated command launches)
+        run: python -m unittest discover -s tests -v
+      - name: Install PyInstaller (build only)
+        run: python -m pip install "pyinstaller>=6,<7"
+      - name: Build unsigned Windows beta EXE
+        shell: cmd
+        run: python -m PyInstaller --noconfirm --clean --onefile --windowed --name WindowsAdminToolkit --icon "assets\toolkit.ico" --add-data "assets\toolkit.ico;assets" app.py
+      - name: Verify EXE file exists
+        shell: pwsh
+        run: |
+          if (-not (Test-Path 'dist/WindowsAdminToolkit.exe')) { throw 'WindowsAdminToolkit.exe was not created' }
+          Get-Item 'dist/WindowsAdminToolkit.exe' | Select-Object Name, Length
+      - name: Upload EXE for supervised beta testing (not stable)
+        uses: actions/upload-artifact@v4
+        with:
+          name: WindowsAdminToolkit-unsigned-beta-exe
+          path: dist/WindowsAdminToolkit.exe
+          if-no-files-found: error

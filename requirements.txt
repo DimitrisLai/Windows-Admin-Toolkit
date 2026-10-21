@@ -1,0 +1,2 @@
+# No external runtime dependencies. Python 3.10+ standard library only.
+# For an optional standalone Windows EXE, install PyInstaller separately.
