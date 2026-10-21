@@ -3,6 +3,7 @@ import tempfile
 import time
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 from temp_cleaner import scan_aged_files, remove_selected, _is_expected_user_temp_path
 
@@ -29,6 +30,17 @@ class TempPathPolicyTests(unittest.TestCase):
 
 
 class TempCleanerTests(unittest.TestCase):
+    def setUp(self):
+        # Exercise scan/deletion logic only inside disposable test directories.
+        # Windows CI's TEMP location need not be %LOCALAPPDATA%\Temp.
+        # The production root policy is tested independently above.
+        validator = patch(
+            'temp_cleaner._validate_temp_root',
+            side_effect=lambda root: os.path.normcase(os.path.abspath(root)),
+        )
+        validator.start()
+        self.addCleanup(validator.stop)
+
     def test_preview_does_not_delete_or_select_automatically(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
