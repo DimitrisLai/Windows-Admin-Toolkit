@@ -59,7 +59,7 @@ tr:nth-child(even){background:#f6f9fc}
 def main():
     manual = (ROOT / "USER_MANUAL.md").read_text(encoding="utf-8")
     commands = (ROOT / "COMMAND_REFERENCE.md").read_text(encoding="utf-8")
-    assert commands.count("### \`") == 69, "Unexpected catalog count; review before publishing"
+    assert commands.count("### ") == 69, "Unexpected catalog count; review before publishing"
     markdown = mistune.create_markdown(plugins=["table", "strikethrough", "url"])
     sections = []
     num = 0
