@@ -84,6 +84,17 @@ class DriveAndCommandEdgeTests(unittest.TestCase):
 
 
 class TempAbuseTests(unittest.TestCase):
+    def setUp(self):
+        # Exercise scan/deletion logic only inside disposable test directories.
+        # Windows CI's TEMP location need not be %LOCALAPPDATA%\Temp.
+        # The production root policy is tested independently above.
+        validator = patch(
+            'temp_cleaner._validate_temp_root',
+            side_effect=lambda root: os.path.normcase(os.path.abspath(root)),
+        )
+        validator.start()
+        self.addCleanup(validator.stop)
+
     def test_traversal_outside_temp_path_rejected(self):
         local=r'C:\Users\Tester\AppData\Local'
         self.assertFalse(_is_expected_user_temp_path(local+r'\Temp\..\Documents',local))
