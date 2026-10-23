@@ -6,7 +6,7 @@ from app import AdminToolkit
 
 app = AdminToolkit()
 app.update()
-assert len(app.visible_commands) == 69
+assert len(app.visible_commands) == 73
 assert not app.expert_var.get()
 assert app.expert_toggle.cget('text') == 'EXPERT: OFF'
 app.expert_toggle.invoke()
