@@ -55,7 +55,7 @@ jobs:
           name: Windows-Admin-Toolkit-v2.5.0-all-downloads
           path: release-output/*
           if-no-files-found: error
-      - name: Publish v2.5.0 GitHub prerelease once on main
+      - name: Publish or finalize v2.5.0 feature-freeze release
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         shell: pwsh
         env:
@@ -63,7 +63,10 @@ jobs:
         run: |
           gh release view v2.5.0 --repo "${{ github.repository }}" *> $null
           if ($LASTEXITCODE -eq 0) {
-            Write-Host "The v2.5.0 release already exists. Do not republish a frozen release."
+            # Align the release with the other 2026 feature-freeze projects,
+            # without re-uploading or changing existing versioned binaries.
+            gh release edit v2.5.0 --repo "${{ github.repository }}" --prerelease=false --latest --title "v2.5.0 - Final Feature Release for 2026 (public beta)"
+            if ($LASTEXITCODE -ne 0) { throw "Could not finalize v2.5.0 release label" }
             exit 0
           }
-          gh release create v2.5.0 release-output/Windows-Admin-Toolkit-v2.5.0-Windows.zip release-output/Windows-Admin-Toolkit-v2.5.0-Source.zip release-output/Windows-Admin-Toolkit-v2.5.0-User-Manual.pdf release-output/SHA256SUMS.txt --repo "${{ github.repository }}" --target "${{ github.sha }}" --title "v2.5.0 - 2026 feature-complete public beta" --notes-file YEAR_END_RELEASE_NOTES.md --prerelease
+          gh release create v2.5.0 release-output/Windows-Admin-Toolkit-v2.5.0-Windows.zip release-output/Windows-Admin-Toolkit-v2.5.0-Source.zip release-output/Windows-Admin-Toolkit-v2.5.0-User-Manual.pdf release-output/SHA256SUMS.txt --repo "${{ github.repository }}" --target "${{ github.sha }}" --title "v2.5.0 - Final Feature Release for 2026 (public beta)" --notes-file YEAR_END_RELEASE_NOTES.md --latest
