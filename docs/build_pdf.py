@@ -11,12 +11,15 @@ import mistune
 from weasyprint import HTML
 
 ROOT = Path(__file__).resolve().parents[1]
+import sys
+sys.path.insert(0, str(ROOT))
+from command_catalog import COMMANDS
 OUT = ROOT / "docs" / "Windows_Admin_Toolkit_Detailed_Guide.pdf"
 
 STYLE = """
 @page {size:A4; margin:17mm 16mm 19mm;
  @top-left{content:'WINDOWS ADMIN TOOLKIT  /  USER GUIDE';color:#6b7e95;font:8pt sans-serif;}
- @top-right{content:'v1.2.0 BETA';color:#6b7e95;font:8pt sans-serif;}
+ @top-right{content:'v2.5.0';color:#6b7e95;font:8pt sans-serif;}
  @bottom-right{content:counter(page);color:#52657c;font:9pt sans-serif;}
  @bottom-left{content:'Free and open source  •  MIT License';color:#8794a5;font:8pt sans-serif;}}
 @page:first{margin:0;@top-left{content:none}@top-right{content:none}
@@ -59,7 +62,9 @@ tr:nth-child(even){background:#f6f9fc}
 def main():
     manual = (ROOT / "USER_MANUAL.md").read_text(encoding="utf-8")
     commands = (ROOT / "COMMAND_REFERENCE.md").read_text(encoding="utf-8")
-    assert commands.count("### ") == 69, "Unexpected catalog count; review before publishing"
+    assert commands.count("### ") == len(COMMANDS), "Reference count differs from catalog"
+    for c in COMMANDS:
+        assert commands.count("### `" + c.label + "`") == 1, "Missing or duplicate command: " + c.id
     markdown = mistune.create_markdown(plugins=["table", "strikethrough", "url"])
     sections = []
     num = 0
@@ -79,16 +84,17 @@ def main():
     toc += "<div class='caution'><strong>Important:</strong> A successful launch is not proof that a command completed or repaired Windows. Always read its output.</div></section>"
     cover = """<section class='cover'><div class='cap'>WINDOWS ADMIN TOOLKIT</div>
     <h1>The Complete User Guide<br>&amp; Command Handbook</h1>
-    <div class='sub'>Understand 69 Windows maintenance and diagnostic tools</div>
-    <div class='metric'>69 built-in commands</div><div class='metric'>11 categories</div>
-    <div class='metric'>v1.2.0 Beta</div><br>
+    <div class='sub'>Understand {COMMAND_COUNT} Windows maintenance and diagnostic tools</div>
+    <div class='metric'>{COMMAND_COUNT} built-in commands</div><div class='metric'>11 categories</div>
+    <div class='metric'>v2.5.0</div><br>
     <img src='assets/app_preview.png'>
     <p class='fine'>Installation · explanations · real examples · safety · official references</p>
     <p class='last'>October 2026 · Windows 10/11 · MIT License<br>github.com/DimitrisLai/Windows-Admin-Toolkit</p></section>"""
+    cover = cover.replace("{COMMAND_COUNT}", str(len(COMMANDS)))
     page = "<!doctype html><html lang='en'><head><meta charset='utf-8'><style>"+STYLE+"</style></head><body>"
     page += cover + toc + "<h1 class='chapter' id='guide'>Part 1 · Getting started and safety</h1>"
-    page += markdown(manual) + "<h1 class='chapter' id='reference'>Part 2 · The 69-command handbook</h1>"
-    page += "<div class='caution'>Each entry gives a description, use case, warnings, example syntax, elevation/drive requirements, and official documentation. Descriptions come from the tested beta's command catalog; command execution still requires Windows validation.</div>"
+    page += markdown(manual) + f"<h1 class='chapter' id='reference'>Part 2 · The {len(COMMANDS)}-command handbook</h1>"
+    page += "<div class='caution'>Each entry gives a description, use case, warnings, example syntax, elevation/drive requirements, and official documentation. Descriptions come from the maintained command catalog; command execution still requires real-Windows validation.</div>"
     page += ref + "</body></html>"
     OUT.parent.mkdir(parents=True, exist_ok=True)
     HTML(string=page, base_url=str(ROOT)+"/").write_pdf(str(OUT), pdf_version="1.7")

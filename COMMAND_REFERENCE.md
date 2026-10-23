@@ -1,8 +1,8 @@
 # Windows Admin Toolkit — Complete Command Reference
 
-**Version:** 1.2.0-beta.1 · **Date:** 21 October 2026 · **License:** MIT
+**Version:** 2.5.0 · **Date:** 23 October 2026 · **License:** MIT
 
-This document is generated from the exact 69-command `command_catalog.py` in the public beta. It is not a promise that every utility exists on every version of Windows.
+This reference describes all 73 commands defined in `command_catalog.py` for v2.5.0. It is not a promise that every utility exists on every version of Windows.
 
 ## Safety key
 
@@ -299,7 +299,7 @@ For volume-specific commands the UI passes the currently selected drive, initial
 - **Command example:** `cscript.exe //nologo C:\Windows\System32\slmgr.vbs /dlv`
 - **Reference:** [Microsoft documentation](https://learn.microsoft.com/en-us/windows-server/get-started/activation-slmgr-vbs-options)
 
-## Networking (11)
+## Networking (13)
 
 ### `ipconfig /all`
 
@@ -422,7 +422,29 @@ For volume-specific commands the UI passes the currently selected drive, initial
 - **Command example:** `powershell.exe -NoProfile -Command "Test-NetConnection -ComputerName www.microsoft.com -Port 443 -InformationLevel Detailed | Format-List"`
 - **Reference:** [Microsoft documentation](https://learn.microsoft.com/en-us/powershell/module/nettcpip/test-netconnection)
 
-## Logs & monitoring (9)
+### `Active Windows Firewall profiles (PowerShell)`
+
+- **What it does:** Displays active Domain, Private and Public Windows Firewall profile settings without changing rules.
+- **Best for:** Investigating whether Windows Firewall is enabled and how inbound and outbound traffic are handled.
+- **Notes / limits:** Shows configured profile defaults, not a guarantee that a specific connection is allowed. Corporate policy or third-party firewalls can change effective behavior.
+- **Safety:** Inspection / low risk
+- **Administrator:** No · **Drive picker:** Locked · **Restart:** No
+- **Special input:** None
+- **Command example:** `powershell.exe -NoProfile -Command "Get-NetFirewallProfile -PolicyStore ActiveStore | Select-Object Name,Enabled,DefaultInboundAction,DefaultOutboundAction | Format-Table -AutoSize"`
+- **Reference:** [Microsoft documentation](https://learn.microsoft.com/en-us/powershell/module/netsecurity/get-netfirewallprofile?view=win10-ps)
+
+### `Configured DNS servers (PowerShell)`
+
+- **What it does:** Shows DNS server addresses configured on Windows network interfaces for IPv4 and IPv6.
+- **Best for:** Diagnosing incorrect DNS resolvers, name-resolution failures or unexpected network settings.
+- **Notes / limits:** May list disconnected adapters and private network addresses. This checks configuration, not whether DNS resolution is working.
+- **Safety:** Inspection / low risk
+- **Administrator:** No · **Drive picker:** Locked · **Restart:** No
+- **Special input:** None
+- **Command example:** `powershell.exe -NoProfile -Command "Get-DnsClientServerAddress | Select-Object InterfaceAlias,AddressFamily,ServerAddresses | Format-List"`
+- **Reference:** [Microsoft documentation](https://learn.microsoft.com/en-us/powershell/module/dnsclient/get-dnsclientserveraddress)
+
+## Logs & monitoring (11)
 
 ### `perfmon /rel`
 
@@ -522,6 +544,28 @@ For volume-specific commands the UI passes the currently selected drive, initial
 - **Special input:** None
 - **Command example:** `gpresult.exe /r`
 - **Reference:** [Microsoft documentation](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/gpresult)
+
+### `Microsoft Defender detection history (PowerShell)`
+
+- **What it does:** Lists up to 20 recent active or historical threat-detection records available to Microsoft Defender Antivirus.
+- **Best for:** Reviewing detections after investigating suspicious files or an unexpected antivirus warning.
+- **Notes / limits:** Defender must be available and permitted by policy. History can be incomplete; an empty list does not prove the device is malware-free. Resources may include sensitive local paths.
+- **Safety:** Inspection / low risk
+- **Administrator:** No · **Drive picker:** Locked · **Restart:** No
+- **Special input:** None
+- **Command example:** `powershell.exe -NoProfile -Command "Get-MpThreatDetection | Sort-Object InitialDetectionTime -Descending | Select-Object -First 20 InitialDetectionTime,ThreatID,ActionSuccess,Resources | Format-List"`
+- **Reference:** [Microsoft documentation](https://learn.microsoft.com/en-us/powershell/module/defender/get-mpthreatdetection?view=windowsserver2022-ps)
+
+### `Windows Time synchronization status`
+
+- **What it does:** Shows the local Windows Time service synchronization state, source and last recorded successful synchronization.
+- **Best for:** Investigating wrong system time, authentication failures or clock-related errors.
+- **Notes / limits:** The Windows Time service must be available; local administrator rights can be required. This query does not resynchronize or change time settings.
+- **Safety:** Inspection / low risk
+- **Administrator:** Yes · **Drive picker:** Locked · **Restart:** No
+- **Special input:** None
+- **Command example:** `w32tm.exe /query /status`
+- **Reference:** [Microsoft documentation](https://learn.microsoft.com/en-us/windows-server/networking/windows-time-service/windows-time-service-tools-and-settings)
 
 ## RAM & performance (5)
 
@@ -802,7 +846,8 @@ For volume-specific commands the UI passes the currently selected drive, initial
 - SleepStudy requires Modern Standby hardware; PowerShell modules and device-specific counters may be missing.
 - Disk and networking repair tools may need elevation, restart, backups and a maintenance window.
 - `Test-NetConnection` sends network traffic to the user-selected host/port; it does not change system configuration.
-- Windows 10 reaches end of general support in October 2025, but the toolkit can still launch its existing built-in utilities on supported configurations.
+- The firewall and DNS PowerShell modules may be unavailable or restricted on some systems; Defender detection history may be incomplete, and Windows Time service may not be running.
+- Windows 10 reached end of general support in October 2025, but the toolkit can still launch its existing built-in utilities on supported configurations.
 
 ## Accuracy and testing
 

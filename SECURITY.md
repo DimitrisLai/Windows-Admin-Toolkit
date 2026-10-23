@@ -4,8 +4,8 @@
 
 ## Supported version
 
-- `v1.2.0-beta.1`: best-effort support and bug fixing, Windows pilot pending.
-- Previous versions: superseded by the beta source; upgrade before reporting issues.
+- `v2.5.0` (public beta): current year-end source milestone; Windows pilot and unsigned EXE warnings remain applicable.
+- Previous builds, including `v1.2.0-beta.1` and `v2.4.5`, are superseded for new reports.
 
 ## Reporting a problem
 

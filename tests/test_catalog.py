@@ -9,7 +9,7 @@ from windows_launcher import available_drives
 class CommandCatalogTests(unittest.TestCase):
     def test_unique_ids(self):
         self.assertEqual(len(COMMANDS), len(BY_ID))
-        self.assertEqual(len(COMMANDS), 69)
+        self.assertEqual(len(COMMANDS), 73)
         self.assertTrue(all(c.description and c.best_for and c.notes for c in COMMANDS))
         self.assertTrue(all(c.risk in ('read', 'change', 'heavy') for c in COMMANDS))
 
@@ -63,7 +63,7 @@ class CommandCatalogTests(unittest.TestCase):
         for category, minimum in groups.items():
             with self.subTest(category=category):
                 self.assertGreaterEqual(sum(1 for c in COMMANDS if c.category == category), minimum)
-        self.assertEqual(len({c.id for c in COMMANDS}), 69)
+        self.assertEqual(len({c.id for c in COMMANDS}), 73)
         self.assertTrue(all(c.doc_url.startswith('https://') for c in COMMANDS if c.doc_url))
 
     def test_drive_rules_every_entry(self):

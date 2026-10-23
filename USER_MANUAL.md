@@ -1,6 +1,6 @@
 # Windows Admin Toolkit — User Manual
 
-**Version 2.4.5** · 69 built-in commands · MIT · Updated 23 October 2026
+**Version 2.5.0** · 73 built-in commands · MIT · Updated 23 October 2026
 
 ## 1. Before you start
 
@@ -36,7 +36,15 @@ Requires Windows 10/11, Python 3.10+ with Tkinter (standard Python for Windows).
 
 If UAC appears, read the publisher/path and only approve an action you initiated. Cancellation should leave the system unchanged. Company policies can disallow elevation or utilities.
 
-## 5. Common workflows
+## 5. New diagnostic checks in v2.5.0
+
+The **Networking** category now includes Active Windows Firewall profiles (read-only active profile defaults) and Configured DNS servers (read-only DNS configuration by adapter). Use these before changing firewall or DNS settings; displayed configuration is not a connectivity test.
+
+**Logs & monitoring** now includes Microsoft Defender detection history (up to 20 detections available from Defender; results can include personal file paths) and Windows Time synchronization status (source and synchronization details; may require administrator access). Neither performs a scan, cleans malware or adjusts the clock. No detections does not mean a device is malware-free.
+
+Expert Mode continues to suppress only the post-launch notification. Important warnings, administrative approval and error messages remain visible.
+
+## 6. Common workflows
 
 **Windows seems corrupted:** start with `DISM /CheckHealth` then `DISM /ScanHealth` or `sfc /verifyonly`. If a repair is actually needed, back up data first and use Microsoft repair instructions; `DISM /RestoreHealth` and `sfc /scannow` are changes, not harmless viewing.
 
@@ -54,11 +62,11 @@ If UAC appears, read the publisher/path and only approve an action you initiated
 
 **Workplace policy problems:** use `gpresult /r` or `whoami /all` and speak with your IT administrator rather than changing settings yourself.
 
-## 6. Saving HTML reports
+## 7. Saving HTML reports
 
 Battery Report, Energy Report and SleepStudy require the **Save report as…** selector. Choose an existing folder and `.html` name, then acknowledge the file-creation warning. If the report fails on the Windows computer, the terminal window normally explains why. A destination path containing spaces or non-English characters is supported as long as it does not contain disallowed shell metacharacters.
 
-## 7. TEMP cleaner: precise scope
+## 8. TEMP cleaner: precise scope
 
 - Searches old **files** under the signed-in user's `%LOCALAPPDATA%\Temp`.
 - Age options are 7, 14, 30, 60 or 90 days based on last modification time.
@@ -70,7 +78,7 @@ Battery Report, Energy Report and SleepStudy require the **Save report as…** s
 
 **Never use this first on a business PC or to recover urgently needed space.** Windows Storage Sense/Disk Cleanup are safer system-maintained alternatives.
 
-## 8. Troubleshooting
+## 9. Troubleshooting
 
 | Symptom | First action |
 |---|---|
@@ -83,10 +91,10 @@ Battery Report, Energy Report and SleepStudy require the **Save report as…** s
 | SleepStudy unsupported | Check `powercfg /a`; the computer may not support Modern Standby |
 | WinGet missing | Update/install Windows Package Manager through supported Microsoft channels, or skip it |
 
-## 9. What has not been validated
+## 10. What has not been validated
 
 The Linux automated tests exercise 69 commands by simulated launch request only. They do **not** establish successful outcomes on Windows, UAC behavior, or that PyInstaller builds an EXE that works on every PC. See [`WINDOWS_TEST_PLAN.md`](WINDOWS_TEST_PLAN.md) before a public stable release.
 
-## 10. Privacy, support and licensing
+## 11. Privacy, support and licensing
 
 No tracking or sign-in. Some Windows utilities can use the network. Review outputs for user names, serials, SIDs, SSIDs, hostnames and enterprise details before sharing. Bug reports should omit secrets and identifying information. The project code is MIT licensed, without warranty.

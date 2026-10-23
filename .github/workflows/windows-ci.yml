@@ -1,4 +1,4 @@
-name: Windows tests and beta EXE build
+name: Windows tests, GUI regression and beta EXE build
 
 on:
   push:
@@ -36,4 +36,28 @@ jobs:
         with:
           name: WindowsAdminToolkit-unsigned-beta-exe
           path: dist/WindowsAdminToolkit.exe
+          if-no-files-found: error
+
+  gui-simulations:
+    name: Full 73-command GUI simulations (Xvfb)
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Tkinter and virtual display
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y xvfb python3-tk
+      - name: Run Tkinter smoke tests
+        run: xvfb-run -a /usr/bin/python3 tests/smoke_gui.py
+      - name: Click through all 73 commands with mocked Windows launches
+        run: xvfb-run -a /usr/bin/python3 tests/manual_exhaustive_gui.py
+      - name: Test safe TEMP-cleaner GUI with disposable fixtures
+        run: xvfb-run -a /usr/bin/python3 tests/manual_temp_cleaner_gui.py
+      - name: Attach exact GUI assertion matrix
+        uses: actions/upload-artifact@v4
+        with:
+          name: WindowsAdminToolkit-v2.5.0-gui-test-matrix
+          path: GUI_TEST_MATRIX.csv
           if-no-files-found: error

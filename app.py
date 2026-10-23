@@ -32,7 +32,7 @@ ORANGE = '#ffcd7b'
 RED = '#ff9193'
 FONT = 'Segoe UI' if sys.platform == 'win32' else 'DejaVu Sans'
 MONO = 'Cascadia Code' if sys.platform == 'win32' else 'DejaVu Sans Mono'
-APP_VERSION = '2.4.5'
+APP_VERSION = '2.5.0'
 
 
 def label(parent, text, *, size=10, color=TEXT, weight='normal', **kw):
@@ -241,7 +241,7 @@ class AdminToolkit(tk.Tk):
 
         foot = tk.Frame(self, bg=BG, height=32)
         foot.pack(side='bottom', fill='x', padx=22)
-        label(foot, '69 curated tools  •  No arbitrary command entry',
+        label(foot, f'{len(COMMANDS)} curated tools  •  No arbitrary command entry',
               size=9, color=MUTED).pack(side='left')
         self.status = label(foot, '', size=9, color=MUTED)
         self.status.pack(side='right')

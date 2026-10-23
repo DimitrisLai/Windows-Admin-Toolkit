@@ -1,4 +1,4 @@
-"""69-command beta regression tests, including injectable network parameters."""
+"""Regression tests for the nine original v1.2.0 beta additions."""
 import unittest
 from unittest.mock import Mock, patch
 from command_catalog import (
@@ -14,9 +14,9 @@ class NewCommandsTests(unittest.TestCase):
         'diag.winget', 'power.sleepstudy', 'diag.group_policy', 'diag.wmi_verify', 'diag.whoami',
     }
 
-    def test_exactly_69_entries_with_nine_additions(self):
-        self.assertEqual(len(COMMANDS), 69)
-        self.assertEqual(len({c.id for c in COMMANDS}), 69)
+    def test_beta_nine_retained_in_current_catalog(self):
+        self.assertEqual(len(COMMANDS), 73)
+        self.assertEqual(len({c.id for c in COMMANDS}), 73)
         self.assertTrue(self.NINE.issubset(BY_ID))
 
     def test_each_new_entry_has_credible_english_documentation(self):

@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.5.0] — 23 October 2026 (2026 year-end public beta)
+
+**73 curated commands in 11 categories; final planned 2026 code milestone.**
+
+- Added four **inspection-only** troubleshooting commands: active Windows Firewall profiles, configured DNS server addresses, Microsoft Defender detection history, and Windows Time synchronization status.
+- All new commands have use cases, limitations, privacy cautions and Microsoft reference links; none modifies Windows settings.
+- Retained the v2.4.5 Expert Mode toggle without hiding risk confirmations, UAC, errors or command-output windows.
+- Updated the GUI version and changed the footer to derive its count from the live command catalog.
+- Added documentation-to-catalog regression checks so the detailed command reference must cover every entry exactly once.
+- Added a separate Linux/Xvfb GUI regression job to click through all 73 commands with mocked Windows launches, and upload its assertion CSV.
+- Updated the printable PDF generator, user manual, full command reference and Windows pilot checklist for 73 commands.
+- **Validation boundary:** automated command-building/mocked-launch tests and CI-built Windows EXE do not establish that actual repair commands work on production PCs. Retain the beta label and unsigned-binary warning.
+
 ## [2.4.5] — 23 October 2026
 
 **Expert Mode quality-of-life update — Windows real-device execution remains unverified.**
