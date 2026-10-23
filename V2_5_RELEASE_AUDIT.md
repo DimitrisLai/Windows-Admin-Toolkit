@@ -2,7 +2,7 @@
 
 **Date:** 23 October 2026  
 **Scope:** Public beta source milestone, **73 built-in commands across 11 categories**  
-**Status:** Release candidate under automated verification; final CI evidence to be recorded after successful branch tests.
+**Status:** Automated branch checks passed on 23 October 2026. **Windows real-device execution not yet validated.**
 
 ## What changed
 
@@ -17,18 +17,18 @@
 - Added unit regression tests that fail when a command is omitted or duplicated in `COMMAND_REFERENCE.md`.
 - Added an Ubuntu/Xvfb CI job with full GUI click-path checks for all 73 catalog commands and the TEMP cleaner. The job publishes a fresh assertion CSV as an artifact.
 
-## Automated checks expected for v2.5.0
+## Automated checks completed for v2.5.0
 
-| Check | Acceptance condition | Scope |
+| Check | Verified result | Scope |
 |---|---|---|
-| Python compilation | Pass | All core modules and tests on Windows CI |
-| Python unit regressions | All pass | Catalog metadata, input validation, simulated Windows launch API, TEMP logic, Expert Mode and new commands |
-| Exhaustive GUI test | All pass | 73 list selections, input pickers, copy/run/cancel/failure simulations, controls and resizing |
-| TEMP cleaner GUI | All pass | Disposable TEMP fixtures only |
-| Windows EXE packaging | Build and artifact upload succeed | CI-created unsigned EXE exists; this **does not** prove runtime command correctness |
-| Printable PDF | Generate without catalog/reference mismatch | 73 entries and documentation refreshed |
+| Python compilation | **PASS** | All core modules and tests in Windows CI |
+| Python unit regressions | **67/67 PASS** | Catalog metadata, input validation, simulated Windows launch API, TEMP logic, Expert Mode and four new commands |
+| Exhaustive GUI test | **1,385/1,385 PASS** | 73 list selections, input pickers, copy/run/cancel/failure simulations, controls, scrolling and resizing |
+| TEMP cleaner GUI | **13/13 PASS** | Disposable TEMP fixtures only |
+| Windows EXE packaging | **PASS** | Windows GitHub Actions built and uploaded an unsigned EXE; this **does not** establish that the program works on all real Windows PCs |
+| Printable PDF | **Reference parity PASS; PDF publication checked separately after merge** | Catalog has 73 entries, and the printable PDF build enforces exact reference parity |
 
-CI workflow: [Windows tests, GUI regression and beta EXE build](.github/workflows/windows-ci.yml). The most recent workflow result is the source of truth until numerical outcomes are recorded below.
+**Evidence:** [v2.5.0 Windows + GUI CI run](https://github.com/DimitrisLai/Windows-Admin-Toolkit/actions/runs/39991865045) for branch commit `5516b5aaf97d712ba92cb2ca8cbd280c0eaaeded`. The GUI job uploads a current `WindowsAdminToolkit-v2.5.0-gui-test-matrix` CSV artifact; the tracked `GUI_TEST_MATRIX.csv` remains historical.
 
 ## Release limitations
 
@@ -40,6 +40,6 @@ Windows 10/11 compatibility, system locale, PowerShell module availability, Defe
 
 ## Year-end handover
 
-1. Retain v2.5.0 source, CI artifacts, updated guide and changelog as the final 2026 milestone once the branch checks succeed.
+1. Retain v2.5.0 source, CI artifacts, updated guide and changelog as the final 2026 milestone after the successful automated branch tests.
 2. Run the [real Windows pilot checklist](WINDOWS_TEST_PLAN.md) before treating the program as production-validated.
 3. Keep this repository **public beta** until actual Windows execution, security and UX checks are documented. Do not disable Windows security controls merely to launch an unsigned EXE.
