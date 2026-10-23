@@ -16,7 +16,7 @@ class NewCommandsTests(unittest.TestCase):
 
     def test_beta_nine_retained_in_current_catalog(self):
         self.assertEqual(len(COMMANDS), 73)
-        self.assertEqual(len({c.id for c in COMMANDS}), 69)
+        self.assertEqual(len({c.id for c in COMMANDS}), 73)
         self.assertTrue(self.NINE.issubset(BY_ID))
 
     def test_each_new_entry_has_credible_english_documentation(self):
