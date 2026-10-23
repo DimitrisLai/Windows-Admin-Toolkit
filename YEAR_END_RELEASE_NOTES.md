@@ -1,4 +1,4 @@
-# Windows Admin Toolkit v2.5.0 — 2026 year-end public beta
+# Windows Admin Toolkit v2.5.0 — Final Feature Release for 2026
 
 **Version 2.5.0 · Created by Dimitris Laidis · MIT License**  
 **Release date:** October 23, 2026 · **73 built-in commands / 11 categories**
@@ -20,8 +20,8 @@ Four new read-only inspections — active Windows Firewall profiles, configured 
 
 ## Verification and safety
 
-At the v2.5 code-freeze audit, **67 automated Python unit tests, 1,385 simulated GUI checks and 13 TEMP cleaner GUI checks passed**. The Windows CI build generated an unsigned executable, and the PDF handbook was generated successfully. These checks do **not** mean all commands were executed against real Windows installations; actual UAC behavior, OS compatibility and repair outcomes still need a supervised real-Windows pilot.
+At the v2.5 code-freeze audit, **67 automated Python unit tests, 1,385 simulated GUI checks and 13 TEMP cleaner GUI checks passed**. The Windows CI build generated an unsigned executable, and the PDF handbook was generated successfully. The maintainer has tested the application on Windows. These automated checks do **not** establish that all 73 commands, UAC scenarios, OS configurations or repair outcomes have been verified.
 
-**Public beta notice:** This toolkit can launch system-changing operations. Back up important data and read the warnings and native command outputs. Do **not** disable Defender, SmartScreen, or workplace security controls to run an unsigned build. SHA-256 checksums help detect changed downloads but do not replace publisher code signing.
+**Safety notice:** This toolkit can launch system-changing operations. Back up important data and read the warnings and native command outputs. Do **not** disable Defender, SmartScreen, or workplace security controls to run an unsigned build. SHA-256 checksums help detect changed downloads but do not replace publisher code signing.
 
 See `V2_5_RELEASE_AUDIT.md`, `WINDOWS_TEST_PLAN.md`, and `SECURITY.md` in the source ZIP for further details.
