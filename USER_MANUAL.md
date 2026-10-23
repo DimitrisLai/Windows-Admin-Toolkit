@@ -44,7 +44,7 @@ The **Networking** category now includes Active Windows Firewall profiles (read-
 
 Expert Mode continues to suppress only the post-launch notification. Important warnings, administrative approval and error messages remain visible.
 
-## 7. Common workflows
+## 6. Common workflows
 
 **Windows seems corrupted:** start with `DISM /CheckHealth` then `DISM /ScanHealth` or `sfc /verifyonly`. If a repair is actually needed, back up data first and use Microsoft repair instructions; `DISM /RestoreHealth` and `sfc /scannow` are changes, not harmless viewing.
 
@@ -95,6 +95,6 @@ Battery Report, Energy Report and SleepStudy require the **Save report as…** s
 
 The Linux automated tests exercise 69 commands by simulated launch request only. They do **not** establish successful outcomes on Windows, UAC behavior, or that PyInstaller builds an EXE that works on every PC. See [`WINDOWS_TEST_PLAN.md`](WINDOWS_TEST_PLAN.md) before a public stable release.
 
-## 10. Privacy, support and licensing
+## 11. Privacy, support and licensing
 
 No tracking or sign-in. Some Windows utilities can use the network. Review outputs for user names, serials, SIDs, SSIDs, hostnames and enterprise details before sharing. Bug reports should omit secrets and identifying information. The project code is MIT licensed, without warranty.
