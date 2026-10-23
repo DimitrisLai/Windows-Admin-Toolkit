@@ -14,7 +14,7 @@
 
 The project remains **public, available to download, and MIT-licensed**. Issues and pull requests can still be submitted, but there is no commitment to a feature roadmap or a regular update schedule. Important security or critical bug fixes, compatibility corrections, or code-signing changes may be published if necessary. Development may be reconsidered in **2027**.
 
-This is a **feature-complete / maintenance-only status**, not an archived or abandoned repository. The current release is explicitly a **public beta**; full real-device validation is still required for system-changing commands.
+This is a **feature-complete / maintenance-only status**, not an archived or abandoned repository.
 
 ## Download
 
