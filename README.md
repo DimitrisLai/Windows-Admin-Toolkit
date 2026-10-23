@@ -22,11 +22,11 @@ This is a **feature-complete / maintenance-only status**, not an archived or aba
 
 The **Windows ZIP** includes an **unsigned** `WindowsAdminToolkit.exe` (Python not required), a quick-start file, MIT license, and PDF manual. Extract the ZIP before running the app. The **Source ZIP** contains the Python code, tests and documentation. The PDF is also downloadable individually.
 
-For integrity checks, compare each downloaded file's SHA-256 hash with the release's `SHA256SUMS.txt`. Hashes verify that files match the published checksums, **not** that an EXE is digitally signed or safe. The Windows executable is intended for **supervised beta testing**; do not bypass Defender, SmartScreen, or corporate security policies.
+For integrity checks, compare each downloaded file's SHA-256 hash with the release's `SHA256SUMS.txt`. Hashes verify that files match the published checksums, **not** that an EXE is digitally signed or safe. The Windows executable is **unsigned**; do not bypass Defender, SmartScreen, or corporate security policies.
 
 A free, open-source Windows diagnostics and maintenance reference with a dark desktop GUI. Browse **73 curated built-in Windows commands** across **11 categories**, see what each does, choose a drive where appropriate, copy commands and request a guarded launch.
 
-> **Beta warning:** Command previews, validation and graphical interactions have been tested on a Linux virtual display with simulated Windows launches. **Actual command execution, UAC behavior and the PyInstaller executable have not yet been verified on a real Windows PC.** Use a supervised pilot before distributing or trusting repairs. This software is provided without warranty.
+> **Safety and testing:** The maintainer reports testing v2.5.0 on Windows, and automated command previews, validation and GUI simulations passed. **A complete, documented real-Windows test of all 73 commands, UAC paths and supported PC configurations is not available.** Always review warnings and native command results. The executable is unsigned and this software is provided without warranty.
 
 ![Archived screenshot from v1.2.0 beta; v2.5.0 interface additions are not depicted](assets/app_preview.png)
 
@@ -59,7 +59,7 @@ Use the **EXPERT: OFF / EXPERT: ON** toggle in the app header to choose whether 
 - **Always preserved:** All confirmations for system-changing or disruptive operations, invalid-input warnings, errors, Windows UAC prompts, and any separately launched command console or Windows management app. Expert Mode does not elevate privileges or verify whether a command succeeded.
 - The setting is **session-only** and resets to OFF when you restart the toolkit.
 
-**Version history note:** The earlier repository source identified as `v1.2.0-beta.1`, then the Expert Mode milestone was `v2.4.5`. This release advances to `v2.5.0`; intermediate version labels were not all published. Windows command execution still needs real-device validation.
+**Version history note:** The earlier repository source identified as `v1.2.0-beta.1`, then the Expert Mode milestone was `v2.4.5`. This release advances to `v2.5.0`; intermediate version labels were not all published. The full 73-command real-Windows test matrix is not yet documented.
 
 ## Run on Windows from source
 
@@ -75,7 +75,7 @@ Use the **EXPERT: OFF / EXPERT: ON** toggle in the app header to choose whether 
 
 Double-click **`Build_Windows_EXE.bat`** on a Windows PC. It installs a compatible PyInstaller 6.x version and builds `dist\WindowsAdminToolkit.exe`. The app icon is bundled.
 
-An EXE builder is also included in [GitHub Actions](.github/workflows/windows-ci.yml). Its CI artifact is for **beta testing only**. **Neither local nor CI-compiled executables are signed or automatically verified for successful Windows command execution.** Do not disable SmartScreen, Defender or company security policies to run an unsigned binary.
+An EXE builder is also included in [GitHub Actions](.github/workflows/windows-ci.yml). Its CI artifact is intended for supervised testing. **Neither local nor CI-compiled executables are signed or automatically verified for successful Windows command execution.** Do not disable SmartScreen, Defender or company security policies to run an unsigned binary.
 
 ## What's new in v2.5.0 (2026 year-end milestone)
 
@@ -88,7 +88,7 @@ Four additional **read-only** diagnostics complete the 73-command catalog:
 | Microsoft Defender detection history | Recent and past Defender threat records | No entries does not prove a clean PC; sensitive local paths may appear |
 | Windows Time synchronization | Source and timing status | Windows Time service/admin access may be required |
 
-Additional release work: versioned reference/manual updates, command-to-handbook consistency tests, and a dedicated cross-platform GUI-test workflow. **Actual maintenance-command results and UAC on real Windows devices remain unverified.** The 2026 code milestone is marked public beta, not a fully certified stable repair tool.
+Additional release work: versioned reference/manual updates, command-to-handbook consistency tests, and a dedicated cross-platform GUI-test workflow. **Automated checks do not establish real-Windows execution of every command or every UAC scenario.** The maintainer has tested v2.5.0 on Windows, but comprehensive platform coverage is not documented.
 
 ## Command additions in 1.2.0 beta
 
