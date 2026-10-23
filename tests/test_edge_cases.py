@@ -56,8 +56,8 @@ class DriveAndCommandEdgeTests(unittest.TestCase):
                 self.assertEqual(BY_ID[key].risk,'change')
                 self.assertTrue(BY_ID[key].needs_report)
 
-    def test_all_69_have_precise_kind_and_admin_classification(self):
-        self.assertEqual(len(COMMANDS),69)
+    def test_all_73_have_precise_kind_and_admin_classification(self):
+        self.assertEqual(len(COMMANDS),73)
         for c in COMMANDS:
             with self.subTest(id=c.id):
                 self.assertIn(c.kind,('native','powershell','slmgr','gui','shell'))
