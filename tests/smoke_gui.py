@@ -32,7 +32,7 @@ assert {'sfc.scan', 'sfc.verify', 'sfc.file'}.issubset({x.id for x in app.visibl
 app.category_var.set('Networking')
 app.search_var.set('')
 app._populate_commands()
-assert len(app.visible_commands) == 11
+assert len(app.visible_commands) == sum(c.category == 'Networking' for c in __import__('command_catalog').COMMANDS)
 app.category_var.set('Power & battery')
 app._populate_commands(select_id='power.battery')
 app.update()
