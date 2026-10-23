@@ -1,16 +1,16 @@
 # Windows Admin Toolkit
 
-**Public beta · v2.4.5 · MIT licensed · Windows 10/11 · Python 3.10+**
+**Public beta · v2.5.0 · MIT licensed · Windows 10/11 · Python 3.10+**
 
-A free, open-source Windows diagnostics and maintenance reference with a dark desktop GUI. Browse **69 curated built-in Windows commands** across **11 categories**, see what each does, choose a drive where appropriate, copy commands and request a guarded launch.
+A free, open-source Windows diagnostics and maintenance reference with a dark desktop GUI. Browse **73 curated built-in Windows commands** across **11 categories**, see what each does, choose a drive where appropriate, copy commands and request a guarded launch.
 
 > **Beta warning:** Command previews, validation and graphical interactions have been tested on a Linux virtual display with simulated Windows launches. **Actual command execution, UAC behavior and the PyInstaller executable have not yet been verified on a real Windows PC.** Use a supervised pilot before distributing or trusting repairs. This software is provided without warranty.
 
-![Archived screenshot of Windows Admin Toolkit v1.2.0 beta; the v2.4.5 Expert toggle is not shown](assets/app_preview.png)
+![Archived screenshot from v1.2.0 beta; v2.5.0 interface additions are not depicted](assets/app_preview.png)
 
 ## Detailed PDF Manual
 
-The printable handbook explains **all 69 commands**, with practical usage instructions, safety classifications, examples, administrator and drive requirements, limitations, and Microsoft documentation links.
+The printable handbook explains **all 73 commands**, with practical usage instructions, safety classifications, examples, administrator and drive requirements, limitations, and Microsoft documentation links.
 
 **[Read or download the Complete User Guide & Command Handbook (PDF)](docs/Windows_Admin_Toolkit_Detailed_Guide.pdf)**
 
@@ -18,7 +18,7 @@ The PDF is rebuilt automatically from `USER_MANUAL.md` and `COMMAND_REFERENCE.md
 
 ## Main features
 
-- **69 commands / 11 categories:** Windows file repair, DISM, disk health, RAM, startup/drivers, networking, Windows logs, power, battery and temporary files.
+- **73 commands / 11 categories:** Windows file repair, DISM, disk health, RAM, startup/drivers, networking, Windows logs, power, battery and temporary files.
 - **Easy navigation:** Search, category filter, keyboard shortcut `Ctrl+F`, scrollable command and details panels; source screenshot above is an actual Tkinter capture, not a mockup.
 - **Drive picker:** Select a detected local drive (default `C:` when available); the picker locks when the current command doesn't accept a drive letter.
 - **Plain-English guidance:** Explanation, best use, limitations, risk, administrator requirements and restart notes for each command.
@@ -55,6 +55,19 @@ Double-click **`Build_Windows_EXE.bat`** on a Windows PC. It installs a compatib
 
 An EXE builder is also included in [GitHub Actions](.github/workflows/windows-ci.yml). Its CI artifact is for **beta testing only**. **Neither local nor CI-compiled executables are signed or automatically verified for successful Windows command execution.** Do not disable SmartScreen, Defender or company security policies to run an unsigned binary.
 
+## What's new in v2.5.0 (2026 year-end milestone)
+
+Four additional **read-only** diagnostics complete the 73-command catalog:
+
+| New diagnostic | What it helps users check | Important limits |
+|---|---|---|
+| Active Windows Firewall profiles | Enabled state and default inbound/outbound actions | Does not list every effective rule; policy may override |
+| Configured DNS servers | DNS settings for IPv4/IPv6 per network adapter | Not a live DNS connectivity test |
+| Microsoft Defender detection history | Recent and past Defender threat records | No entries does not prove a clean PC; sensitive local paths may appear |
+| Windows Time synchronization | Source and timing status | Windows Time service/admin access may be required |
+
+Additional release work: versioned reference/manual updates, command-to-handbook consistency tests, and a dedicated cross-platform GUI-test workflow. **Actual maintenance-command results and UAC on real Windows devices remain unverified.** The 2026 code milestone is marked public beta, not a fully certified stable repair tool.
+
 ## Command additions in 1.2.0 beta
 
 | Command/tool | Purpose | Requirement / limitation |
@@ -83,9 +96,9 @@ An EXE builder is also included in [GitHub Actions](.github/workflows/windows-ci
 ## Documentation
 
 - [User manual and walkthrough](USER_MANUAL.md) — full beginner-friendly guide.
-- [All 69 commands and their explanations](COMMAND_REFERENCE.md) — syntax, purpose, limitations, permissions, drive behavior and source links.
+- [All 73 commands and their explanations](COMMAND_REFERENCE.md) — syntax, purpose, limitations, permissions, drive behavior and source links.
 - [Windows pilot test plan](WINDOWS_TEST_PLAN.md) — what remains to validate on real Windows PCs.
-- [Audit and test report](AUDIT_REPORT.md) and [GUI test matrix](GUI_TEST_MATRIX.csv) — honest test coverage and gaps.
+- [Historical 1.2.0 audit](AUDIT_REPORT.md), [historical GUI matrix](GUI_TEST_MATRIX.csv), and [v2.5.0 audit](V2_5_RELEASE_AUDIT.md) — distinguished by tested version. Updated GUI assertion reports are uploaded by the v2.5 CI workflow.
 - [Changelog](CHANGELOG.md), [security policy](SECURITY.md), [contribution guide](CONTRIBUTING.md), [MIT license](LICENSE).
 
 ## Run tests
