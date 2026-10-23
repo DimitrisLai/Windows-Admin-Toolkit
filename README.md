@@ -37,7 +37,7 @@ Use the **EXPERT: OFF / EXPERT: ON** toggle in the app header to choose whether 
 - **Always preserved:** All confirmations for system-changing or disruptive operations, invalid-input warnings, errors, Windows UAC prompts, and any separately launched command console or Windows management app. Expert Mode does not elevate privileges or verify whether a command succeeded.
 - The setting is **session-only** and resets to OFF when you restart the toolkit.
 
-**Version history note:** The prior published source identifies itself as `v1.2.0-beta.1`. This milestone uses the specifically requested version `2.4.5`; the repository does not claim intervening `2.x` releases. Windows command execution still needs real-device validation.
+**Version history note:** The earlier repository source identified as `v1.2.0-beta.1`, then the Expert Mode milestone was `v2.4.5`. This release advances to `v2.5.0`; intermediate version labels were not all published. Windows command execution still needs real-device validation.
 
 ## Run on Windows from source
 
@@ -109,7 +109,7 @@ py -3 -m compileall -q app.py command_catalog.py windows_launcher.py temp_cleane
 py -3 tests\smoke_gui.py
 ```
 
-The unit suite runs automatically in Windows CI. The click-through tests (`tests/manual_exhaustive_gui.py`, `tests/manual_temp_cleaner_gui.py`) require an interactive GUI and use mocked system commands and disposable TEMP fixtures. `tests/capture_release_screenshot.py` is an optional **developer-only** helper requiring Pillow.
+The unit suite runs automatically in Windows CI. The GUI smoke and click-through tests (`tests/manual_exhaustive_gui.py`, `tests/manual_temp_cleaner_gui.py`) run under a Linux virtual display (Xvfb) in a separate CI job; they use mocked Windows command launches and disposable TEMP fixtures. The up-to-date assertion matrix is a CI artifact; the checked-in matrix is historical. `tests/capture_release_screenshot.py` is an optional **developer-only** helper requiring Pillow.
 
 ## Support / contributions
 
