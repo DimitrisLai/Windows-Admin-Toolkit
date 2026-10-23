@@ -32,6 +32,7 @@ ORANGE = '#ffcd7b'
 RED = '#ff9193'
 FONT = 'Segoe UI' if sys.platform == 'win32' else 'DejaVu Sans'
 MONO = 'Cascadia Code' if sys.platform == 'win32' else 'DejaVu Sans Mono'
+APP_VERSION = '2.4.5'
 
 
 def label(parent, text, *, size=10, color=TEXT, weight='normal', **kw):
@@ -124,7 +125,7 @@ class ScrollableDetails(tk.Frame):
 class AdminToolkit(tk.Tk):
     def __init__(self):
         super().__init__()
-        self.title('Windows Admin Toolkit')
+        self.title(f'Windows Admin Toolkit v{APP_VERSION}')
         self.configure(bg=BG)
         screen_w, screen_h = self.winfo_screenwidth(), self.winfo_screenheight()
         width = max(1080, min(1460, screen_w - 70))
@@ -137,6 +138,8 @@ class AdminToolkit(tk.Tk):
         self.search_var = tk.StringVar()
         self.category_var = tk.StringVar(value='All categories')
         self.status_var = tk.StringVar(value='Ready')
+        # Expert Mode is intentionally OFF at every app start; it never removes safety checks.
+        self.expert_var = tk.BooleanVar(value=False)
         self.host_var = tk.StringVar(value='www.microsoft.com')
         self.port_var = tk.StringVar(value='443')
         self.selected_file: str | None = None
@@ -156,6 +159,17 @@ class AdminToolkit(tk.Tk):
         self.bind_all('<MouseWheel>', self._wheel, add='+')
         self.bind_all('<Button-4>', self._wheel, add='+')
         self.bind_all('<Button-5>', self._wheel, add='+')
+
+    def _on_expert_toggle(self):
+        enabled = self.expert_var.get()
+        self.expert_toggle.config(
+            text='EXPERT: ON' if enabled else 'EXPERT: OFF',
+            bg=ACCENT if enabled else INPUT,
+            fg=TEXT if enabled else MUTED,
+            selectcolor=ACCENT if enabled else INPUT)
+        self.status_var.set(
+            'Expert Mode ON — launch notices hidden' if enabled
+            else 'Expert Mode OFF — launch notices visible')
 
     def _set_app_icon(self):
         try:
@@ -197,7 +211,19 @@ class AdminToolkit(tk.Tk):
         self.admin_text = label(header, 'ADMIN MODE' if is_admin() else 'STANDARD MODE',
                                 size=9, color=GREEN if is_admin() else MUTED,
                                 weight='bold')
-        self.admin_text.pack(side='right', padx=23)
+        self.admin_text.pack(side='right', padx=(10, 23))
+        # A visible, keyboard-accessible switch for experienced users. This
+        # controls only the redundant post-launch information dialog.
+        self.expert_toggle = tk.Checkbutton(
+            header, text='EXPERT: OFF', variable=self.expert_var,
+            indicatoron=False, command=self._on_expert_toggle,
+            font=(FONT, 9, 'bold'), bg=INPUT, fg=MUTED,
+            selectcolor=INPUT, activebackground=HOVER, activeforeground=TEXT,
+            relief='flat', bd=0, padx=12, pady=8, cursor='hand2',
+            highlightthickness=1, highlightbackground=BORDER,
+            takefocus=True)
+        self.expert_toggle.pack(side='right', padx=(0, 6))
+
 
         layout = tk.Frame(self, bg=BG)
         layout.pack(fill='both', expand=True, padx=15, pady=(15, 5))
@@ -656,10 +682,11 @@ class AdminToolkit(tk.Tk):
                    self.host_var.get(), self.port_var.get())
             self.status_var.set('Command launched — see the separate Windows window for results')
             # Do not claim success: ShellExecute only confirms that Windows accepted the launch.
-            messagebox.showinfo('Launch requested',
-                                'Windows accepted the launch request.\n\n'
-                                'For console commands, a separate terminal stays open for output. '
-                                'This does not mean the operation completed successfully.')
+            if not self.expert_var.get():
+                messagebox.showinfo('Launch requested',
+                                    'Windows accepted the launch request.\n\n'
+                                    'For console commands, a separate terminal stays open for output. '
+                                    'This does not mean the operation completed successfully.')
         except (ValueError, FileNotFoundError, RuntimeError, OSError) as exc:
             messagebox.showerror('Command not launched', str(exc))
             self.status_var.set('Launch failed or canceled')

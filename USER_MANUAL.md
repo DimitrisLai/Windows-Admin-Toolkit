@@ -1,6 +1,6 @@
 # Windows Admin Toolkit — User Manual
 
-**Version 1.2.0-beta.1** · 69 built-in commands · MIT · Updated 21 October 2026
+**Version 2.4.5** · 69 built-in commands · MIT · Updated 23 October 2026
 
 ## 1. Before you start
 
@@ -25,6 +25,8 @@ Requires Windows 10/11, Python 3.10+ with Tkinter (standard Python for Windows).
 **Right — command details:** the preview is generated using selected values. Underneath you see What it does, Best for, whether a drive or admin privileges are needed, restarts, safety level and important limitations. Use the Microsoft reference link when provided.
 
 **Bottom actions:** Copy Command copies the exact displayed command. Run Command (or Run as Admin) requests a Windows launch. A separate terminal/tool opens; this app cannot prove whether the command succeeded.
+
+**Header — Expert Mode (v2.4.5):** Click **EXPERT: OFF** to switch to **EXPERT: ON**. Expert Mode suppresses the extra *Launch requested* information popup after Windows accepts a command, making repeated launches faster. You still see system-changing confirmations, validation warnings, error messages, Windows UAC prompts and the separate terminal/application that displays the actual output. The footer still states that the command was launched; that is not a claim that it completed. Toggle back to OFF at any time. It starts OFF whenever the toolkit opens.
 
 ## 4. Safety labels and confirmations
 

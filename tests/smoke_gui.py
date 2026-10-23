@@ -7,6 +7,15 @@ from app import AdminToolkit
 app = AdminToolkit()
 app.update()
 assert len(app.visible_commands) == 69
+assert not app.expert_var.get()
+assert app.expert_toggle.cget('text') == 'EXPERT: OFF'
+app.expert_toggle.invoke()
+assert app.expert_var.get()
+assert app.expert_toggle.cget('text') == 'EXPERT: ON'
+assert 'launch notices hidden' in app.status_var.get()
+app.expert_toggle.invoke()
+assert not app.expert_var.get()
+assert app.expert_toggle.cget('text') == 'EXPERT: OFF'
 assert app.current.id == 'disk.recover'
 assert str(app.drive_box.cget('state')) == 'readonly'
 app.search_var.set('command-that-does-not-exist')

@@ -1,12 +1,12 @@
 # Windows Admin Toolkit
 
-**Public beta · v1.2.0-beta.1 · MIT licensed · Windows 10/11 · Python 3.10+**
+**Public beta · v2.4.5 · MIT licensed · Windows 10/11 · Python 3.10+**
 
 A free, open-source Windows diagnostics and maintenance reference with a dark desktop GUI. Browse **69 curated built-in Windows commands** across **11 categories**, see what each does, choose a drive where appropriate, copy commands and request a guarded launch.
 
 > **Beta warning:** Command previews, validation and graphical interactions have been tested on a Linux virtual display with simulated Windows launches. **Actual command execution, UAC behavior and the PyInstaller executable have not yet been verified on a real Windows PC.** Use a supervised pilot before distributing or trusting repairs. This software is provided without warranty.
 
-![Actual screenshot of Windows Admin Toolkit v1.2.0 beta](assets/app_preview.png)
+![Archived screenshot of Windows Admin Toolkit v1.2.0 beta; the v2.4.5 Expert toggle is not shown](assets/app_preview.png)
 
 ## Detailed PDF Manual
 
@@ -24,8 +24,20 @@ The PDF is rebuilt automatically from `USER_MANUAL.md` and `COMMAND_REFERENCE.md
 - **Plain-English guidance:** Explanation, best use, limitations, risk, administrator requirements and restart notes for each command.
 - **User input controls:** SFC protected-file selection; HTML report destinations for Battery Report, Energy Report and SleepStudy; validated hostname/IP and TCP port for `Test-NetConnection`.
 - **Safety:** Warnings before actions that write files, repair, reset or modify settings; Windows UAC for catalog items that need it. There is no arbitrary custom-command console.
+- **Expert Mode (v2.4.5):** Optional header toggle hides only the redundant *Launch requested* popup after Windows accepts a command launch. Confirmation prompts, errors, Windows UAC and command windows remain visible. OFF by default on each restart.
 - **TEMP cleanup:** A separate preview-only-first UI for old files in the current user's local TEMP area, no automatic selection, explicit confirmation and permanent deletion of selected files only.
 - **No telemetry, accounts or external runtime packages** to launch the Python app. Some **Windows commands themselves** can use the internet (e.g. WinGet, DISM repair sources, and user-selected network tests).
+
+## Expert Mode (v2.4.5)
+
+Use the **EXPERT: OFF / EXPERT: ON** toggle in the app header to choose whether to see the informational popup after a successful Windows launch request.
+
+- **OFF (default):** The usual *Launch requested* information dialog appears after Windows accepts a launch.
+- **ON:** The popup is suppressed, so the toolkit stays ready for another command. The footer still shows that the command was launched.
+- **Always preserved:** All confirmations for system-changing or disruptive operations, invalid-input warnings, errors, Windows UAC prompts, and any separately launched command console or Windows management app. Expert Mode does not elevate privileges or verify whether a command succeeded.
+- The setting is **session-only** and resets to OFF when you restart the toolkit.
+
+**Version history note:** The prior published source identifies itself as `v1.2.0-beta.1`. This milestone uses the specifically requested version `2.4.5`; the repository does not claim intervening `2.x` releases. Windows command execution still needs real-device validation.
 
 ## Run on Windows from source
 
