@@ -25,7 +25,7 @@ concurrency:
 
 jobs:
   package-release:
-    name: Test, package, and publish year-end public beta
+    name: Test, package, and publish year-end regular release
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
@@ -65,8 +65,8 @@ jobs:
           if ($LASTEXITCODE -eq 0) {
             # Align the release with the other 2026 feature-freeze projects,
             # without re-uploading or changing existing versioned binaries.
-            gh release edit v2.5.0 --repo "${{ github.repository }}" --prerelease=false --latest --title "v2.5.0 - Final Feature Release for 2026 (public beta)"
+            gh release edit v2.5.0 --repo "${{ github.repository }}" --prerelease=false --latest --title "v2.5.0 - Final Feature Release for 2026"
             if ($LASTEXITCODE -ne 0) { throw "Could not finalize v2.5.0 release label" }
             exit 0
           }
-          gh release create v2.5.0 release-output/Windows-Admin-Toolkit-v2.5.0-Windows.zip release-output/Windows-Admin-Toolkit-v2.5.0-Source.zip release-output/Windows-Admin-Toolkit-v2.5.0-User-Manual.pdf release-output/SHA256SUMS.txt --repo "${{ github.repository }}" --target "${{ github.sha }}" --title "v2.5.0 - Final Feature Release for 2026 (public beta)" --notes-file YEAR_END_RELEASE_NOTES.md --latest
+          gh release create v2.5.0 release-output/Windows-Admin-Toolkit-v2.5.0-Windows.zip release-output/Windows-Admin-Toolkit-v2.5.0-Source.zip release-output/Windows-Admin-Toolkit-v2.5.0-User-Manual.pdf release-output/SHA256SUMS.txt --repo "${{ github.repository }}" --target "${{ github.sha }}" --title "v2.5.0 - Final Feature Release for 2026" --notes-file YEAR_END_RELEASE_NOTES.md --latest
