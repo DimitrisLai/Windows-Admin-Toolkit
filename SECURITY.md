@@ -1,10 +1,10 @@
 # Security Policy and Reporting
 
-**Status:** Public beta. The tool can initiate system modifications and must not be used as an unattended maintenance program.
+**Status:** Regular v2.5.0 feature-complete release. The tool can initiate system modifications and must not be used as an unattended maintenance program.
 
 ## Supported version
 
-- `v2.5.0` (public beta): current year-end source milestone; Windows pilot and unsigned EXE warnings remain applicable.
+- `v2.5.0`: final planned 2026 feature release; the maintainer reports Windows testing, but comprehensive command-by-command validation is not documented, and unsigned EXE warnings remain applicable.
 - Previous builds, including `v1.2.0-beta.1` and `v2.4.5`, are superseded for new reports.
 
 ## Reporting a problem
