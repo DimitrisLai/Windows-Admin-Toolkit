@@ -1,6 +1,28 @@
 # Windows Admin Toolkit
 
-**Public beta · v2.5.0 · MIT licensed · Windows 10/11 · Python 3.10+**
+**A free, open-source desktop toolkit for Windows 10/11 diagnostics and maintenance.**
+
+![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)
+[![MIT License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+[![Python tests](https://github.com/DimitrisLai/Windows-Admin-Toolkit/actions/workflows/windows-ci.yml/badge.svg)](https://github.com/DimitrisLai/Windows-Admin-Toolkit/actions/workflows/windows-ci.yml)
+
+**Version 2.5.0 · Created by Dimitris Laidis · MIT License**
+
+## Project status — Feature-complete for 2026
+
+**v2.5.0 is the final planned feature release for 2026.** As of October 23, 2026, no further feature updates or scheduled releases are planned through **December 31, 2026**.
+
+The project remains **public, available to download, and MIT-licensed**. Issues and pull requests can still be submitted, but there is no commitment to a feature roadmap or a regular update schedule. Important security or critical bug fixes, compatibility corrections, or code-signing changes may be published if necessary. Development may be reconsidered in **2027**.
+
+This is a **feature-complete / maintenance-only status**, not an archived or abandoned repository. The current release is explicitly a **public beta**; full real-device validation is still required for system-changing commands.
+
+## Download
+
+**[Download the v2.5.0 Windows ZIP, complete source ZIP and PDF manual](https://github.com/DimitrisLai/Windows-Admin-Toolkit/releases/tag/v2.5.0)**
+
+The **Windows ZIP** includes an **unsigned** `WindowsAdminToolkit.exe` (Python not required), a quick-start file, MIT license, and PDF manual. Extract the ZIP before running the app. The **Source ZIP** contains the Python code, tests and documentation. The PDF is also downloadable individually.
+
+For integrity checks, compare each downloaded file's SHA-256 hash with the release's `SHA256SUMS.txt`. Hashes verify that files match the published checksums, **not** that an EXE is digitally signed or safe. The Windows executable is intended for **supervised beta testing**; do not bypass Defender, SmartScreen, or corporate security policies.
 
 A free, open-source Windows diagnostics and maintenance reference with a dark desktop GUI. Browse **73 curated built-in Windows commands** across **11 categories**, see what each does, choose a drive where appropriate, copy commands and request a guarded launch.
 
