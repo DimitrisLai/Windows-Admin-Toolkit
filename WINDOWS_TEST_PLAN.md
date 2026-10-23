@@ -1,6 +1,6 @@
 # Windows Admin Toolkit — Real Windows Pilot Checklist
 
-**Applies to:** v1.2.0-beta.1 (69 commands). The previous Linux simulations and Xvfb GUI tests **do not replace** these tests.
+**Applies to:** v2.5.0 (73 commands). The previous Linux simulations and Xvfb GUI tests **do not replace** these tests.
 
 ## Before testing
 
@@ -12,8 +12,9 @@
 ## Essential interface tests
 
 - [ ] Launch `Start_Toolkit.pyw`, close and restart it, minimize/maximize and resize to 1080×620.
+- [ ] Toggle Expert Mode ON and OFF. Confirm only the redundant post-launch info message disappears; risk confirmations, UAC, output windows, and errors remain visible. Restart to verify it defaults OFF.
 - [ ] Search by name, description, and nonsense string; zero results must disable Copy and Run.
-- [ ] Select each of the 69 commands, read explanations and confirm intended drive/target locks.
+- [ ] Select each of the 73 commands, read explanations and confirm intended drive/target locks.
 - [ ] Switch from `C:` to another local drive (if available) and verify CHKDSK and defrag previews change appropriately.
 - [ ] Click small copy icon and full Copy Command; compare text with the displayed command.
 - [ ] Ctrl+F focuses Search; scroll left list, middle controls and right description.
@@ -42,6 +43,10 @@ Mark result for each: **Pass**, **Unsupported/not installed**, **Admin denied**,
 | WMI | `winmgmt /verifyrepository` | Reports live WMI repository consistency; no repair occurs |
 | Recent issues | `perfmon /rel` | Opens Reliability Monitor |
 | Windows logs | `eventvwr.msc` | Opens Event Viewer |
+| Firewall | `Get-NetFirewallProfile -PolicyStore ActiveStore` | Shows active firewall profile defaults without changes |
+| DNS | `Get-DnsClientServerAddress` | Shows configured IPv4/IPv6 DNS resolver settings |
+| Defender history | `Get-MpThreatDetection` | Shows historical detections if Defender is available; empty history is inconclusive |
+| Windows Time | `w32tm /query /status` | Reports time service state/source, or a clear service/elevation error |
 
 ## Generated report tests
 
