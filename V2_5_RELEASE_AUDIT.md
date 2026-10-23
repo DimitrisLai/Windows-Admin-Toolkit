@@ -26,9 +26,9 @@
 | Exhaustive GUI test | **1,385/1,385 PASS** | 73 list selections, input pickers, copy/run/cancel/failure simulations, controls, scrolling and resizing |
 | TEMP cleaner GUI | **13/13 PASS** | Disposable TEMP fixtures only |
 | Windows EXE packaging | **PASS** | Windows GitHub Actions built and uploaded an unsigned EXE; this **does not** establish that the program works on all real Windows PCs |
-| Printable PDF | **Reference parity PASS; PDF publication checked separately after merge** | Catalog has 73 entries, and the printable PDF build enforces exact reference parity |
+| Printable PDF | **PASS (generated and committed)** | GitHub Actions built the current 73-command handbook and committed the PDF to `main` |
 
-**Evidence:** [v2.5.0 Windows + GUI CI run](https://github.com/DimitrisLai/Windows-Admin-Toolkit/actions/runs/39991865045) for branch commit `5516b5aaf97d712ba92cb2ca8cbd280c0eaaeded`. The GUI job uploads a current `WindowsAdminToolkit-v2.5.0-gui-test-matrix` CSV artifact; the tracked `GUI_TEST_MATRIX.csv` remains historical.
+**Evidence:** [merged-main Windows + GUI CI run](https://github.com/DimitrisLai/Windows-Admin-Toolkit/actions/runs/39992314511), [PDF publication workflow](https://github.com/DimitrisLai/Windows-Admin-Toolkit/actions/runs/39992314513), and [earlier v2.5.0 branch run](https://github.com/DimitrisLai/Windows-Admin-Toolkit/actions/runs/39991865045) ; the merged source commit is `655791c0e5e567bf101481833690e03e3b6edccf`. The GUI job uploads a current `WindowsAdminToolkit-v2.5.0-gui-test-matrix` CSV artifact; the tracked `GUI_TEST_MATRIX.csv` remains historical.
 
 ## Release limitations
 
