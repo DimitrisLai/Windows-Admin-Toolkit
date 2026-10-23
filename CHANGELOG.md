@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.4.5] — 23 October 2026
+
+**Expert Mode quality-of-life update — Windows real-device execution remains unverified.**
+
+- Added an always-visible **EXPERT: OFF / EXPERT: ON** header toggle. It is OFF at every startup and does not persist.
+- When ON, suppresses only the redundant **Launch requested** information popup after Windows accepts a command launch; status-bar feedback remains visible.
+- Kept risky-command confirmations, UAC, input-validation warnings, launch errors and separate output/management windows unchanged. This switch does **not** bypass safeguards or silently execute commands.
+- Added focused mock-based tests for normal/expert successful launches, safety confirmation and cancellation, failed launches and non-Windows warnings, plus GUI toggle smoke assertions.
+- Documented usage and limits. The previous version recorded in this repository is **1.2.0-beta.1**; the 2.4.5 label is the specifically requested milestone, not evidence of unpublished intervening releases.
+
 ## [1.2.0-beta.1] — 21 October 2026
 
 **Public beta candidate — Windows execution still needs real-device validation.**
