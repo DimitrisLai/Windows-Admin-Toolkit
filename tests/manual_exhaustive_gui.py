@@ -26,7 +26,7 @@ def check(entry, name, condition):
 
 try:
     app.update()
-    check('GLOBAL', 'all commands initially present', len(app.visible_commands) == 69)
+    check('GLOBAL', 'all commands initially present', len(app.visible_commands) == 73)
     check('GLOBAL', 'all 11 categories present', len(categories()) == 11)
 
     # Deliberately use a second drive so a hard-coded C: will be caught.
@@ -245,7 +245,7 @@ try:
         app._choose_report()
         check('REPORT','unsafe save path blocked',err.called and app.selected_report is None)
 
-    print(f'PASS: {len(checks)} independently checked GUI conditions over 69 command entries.')
+    print(f'PASS: {len(checks)} independently checked GUI conditions over 73 command entries.')
 finally:
     app.destroy()
     export = Path(__file__).resolve().parents[1]/'GUI_TEST_MATRIX.csv'
