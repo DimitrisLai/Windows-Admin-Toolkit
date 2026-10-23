@@ -65,7 +65,7 @@ jobs:
           if ($LASTEXITCODE -eq 0) {
             # Align the release with the other 2026 feature-freeze projects,
             # without re-uploading or changing existing versioned binaries.
-            gh release edit v2.5.0 --repo "${{ github.repository }}" --prerelease=false --latest --title "v2.5.0 - Final Feature Release for 2026"
+            gh release edit v2.5.0 --repo "${{ github.repository }}" --prerelease=false --latest --title "v2.5.0 - Final Feature Release for 2026" --notes-file YEAR_END_RELEASE_NOTES.md
             if ($LASTEXITCODE -ne 0) { throw "Could not finalize v2.5.0 release label" }
             exit 0
           }
